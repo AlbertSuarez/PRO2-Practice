@@ -1,0 +1,504 @@
+\hypertarget{class_experiment}{\section{Referencia de la Clase Experiment}
+\label{class_experiment}\index{Experiment@{Experiment}}
+}
+
+
+Representa un experiment como un conjunto de organismes.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_experiment_a303e6a05d99f403ff4793495a2fbff58}{Experiment} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+\hyperlink{class_experiment_a29118152cb5d4d3197764ed9baa998b4}{Experiment} (int m)
+\begin{DoxyCompactList}\small\item\em Creadora con tamaño predeterminado. \end{DoxyCompactList}\item 
+int \hyperlink{class_experiment_af88536a26e7e074a30edae50e86e4550}{reproduccion} (\hyperlink{class_ranking}{Ranking} \&R)
+\begin{DoxyCompactList}\small\item\em Ronda de reproducción de organismes. \end{DoxyCompactList}\item 
+void \hyperlink{class_experiment_a2658473f47b7df935fb1e2b48159824d}{estiron} (int x)
+\begin{DoxyCompactList}\small\item\em Crecimiento de un organismo. \end{DoxyCompactList}\item 
+void \hyperlink{class_experiment_a1c3d6fabc67e6d9f2a3f72e7845f5988}{recorte} (int x)
+\begin{DoxyCompactList}\small\item\em Decrecimiento de un organismo. \end{DoxyCompactList}\item 
+int \hyperlink{class_experiment_a32df1020a5b5e27949bd2bce272a36d9}{tamano} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de tamaño. \end{DoxyCompactList}\item 
+int \hyperlink{class_experiment_a333c9c8084c76beb6b8848b8f2efec25}{tamano\-\_\-maximo} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de tamaño máximo. \end{DoxyCompactList}\item 
+int \hyperlink{class_experiment_a1f1307d2224b32b4b642b7e545f655f6}{consultar\-\_\-vius} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de organismos vivos. \end{DoxyCompactList}\item 
+bool \hyperlink{class_experiment_af08a77ada723ccaaf6476a3c1331261c}{muerto} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de muerte de todos los organismos. \end{DoxyCompactList}\item 
+void \hyperlink{class_experiment_a02185fb874c9439991a68ab436d084bf}{leer\-\_\-experiment} (int marca)
+\begin{DoxyCompactList}\small\item\em Operación de lectura. \end{DoxyCompactList}\item 
+void \hyperlink{class_experiment_ac2ae9b839376abeac7f65aaea846e70e}{escribir\-\_\-organisme} (int x)
+\begin{DoxyCompactList}\small\item\em Operación de escritura de un organisme del experiment. \end{DoxyCompactList}\item 
+void \hyperlink{class_experiment_a7306fc6afaffe4783774d58e05efc10c}{escribir\-\_\-ultims} (int x)
+\begin{DoxyCompactList}\small\item\em Operación de escritura de los ultimos hijos de la ronda. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_experiment_a329359965b798fa1023b1b29d6ccf832}{M\-A\-X\-O\-R\-G\-A\-N\-I\-S\-M\-E\-S}
+\begin{DoxyCompactList}\small\item\em Indica los maximos organismos posibles del experiment. \end{DoxyCompactList}\item 
+int \hyperlink{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{mida}
+\begin{DoxyCompactList}\small\item\em Indica los organismos vivos y muertos del experiment. \end{DoxyCompactList}\item 
+int \hyperlink{class_experiment_a6d9c9be557f9df1d3162494c2b305ba0}{vius}
+\begin{DoxyCompactList}\small\item\em Indica los organismos vivos del experiment. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{class_organisme}{Organisme} $>$ \hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{E\-X\-P}
+\begin{DoxyCompactList}\small\item\em Sequencia de todos los organismes del experiment. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ bool $>$ $>$ \hyperlink{class_experiment_a34a18593817af15f21bf185369081b5c}{emparellats}
+\begin{DoxyCompactList}\small\item\em Matriu que indica si dos organismos se han reproducido (true) o no (false) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un experiment como un conjunto de organismes. 
+
+Definición en la línea 17 del archivo Experiment.\-hpp.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{class_experiment_a303e6a05d99f403ff4793495a2fbff58}{\index{Experiment@{Experiment}!Experiment@{Experiment}}
+\index{Experiment@{Experiment}!Experiment@{Experiment}}
+\subsubsection[{Experiment}]{\setlength{\rightskip}{0pt plus 5cm}Experiment\-::\-Experiment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_experiment_a303e6a05d99f403ff4793495a2fbff58}
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un experiment. \begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un experiment vacio 
+\end{DoxyPostcond}
+
+
+Definición en la línea 9 del archivo Experiment.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \hyperlink{class_experiment_a329359965b798fa1023b1b29d6ccf832}{MAXORGANISMES} = 0;
+    \hyperlink{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{mida} = 0;
+    \hyperlink{class_experiment_a6d9c9be557f9df1d3162494c2b305ba0}{vius} = 0;
+\}
+\end{DoxyCode}
+\hypertarget{class_experiment_a29118152cb5d4d3197764ed9baa998b4}{\index{Experiment@{Experiment}!Experiment@{Experiment}}
+\index{Experiment@{Experiment}!Experiment@{Experiment}}
+\subsubsection[{Experiment}]{\setlength{\rightskip}{0pt plus 5cm}Experiment\-::\-Experiment (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)}}\label{class_experiment_a29118152cb5d4d3197764ed9baa998b4}
+
+
+Creadora con tamaño predeterminado. 
+
+Permite declarar un experiment nuevo con tamaño maximo especificado. \begin{DoxyPrecond}{Precondición}
+m $>$ 2 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un experiment de tamano maximo m 
+\end{DoxyPostcond}
+
+
+Definición en la línea 16 del archivo Experiment.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \hyperlink{class_experiment_a329359965b798fa1023b1b29d6ccf832}{MAXORGANISMES} = m;
+    \hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP} = vector<Organisme>(m);
+    \hyperlink{class_experiment_a34a18593817af15f21bf185369081b5c}{emparellats} = vector<vector<bool> >(m,vector<bool>(m,\textcolor{keyword}{false}));
+\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_experiment_af88536a26e7e074a30edae50e86e4550}{\index{Experiment@{Experiment}!reproduccion@{reproduccion}}
+\index{reproduccion@{reproduccion}!Experiment@{Experiment}}
+\subsubsection[{reproduccion}]{\setlength{\rightskip}{0pt plus 5cm}int Experiment\-::reproduccion (
+\begin{DoxyParamCaption}
+\item[{{\bf Ranking} \&}]{R}
+\end{DoxyParamCaption}
+)}}\label{class_experiment_af88536a26e7e074a30edae50e86e4550}
+
+
+Ronda de reproducción de organismes. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el numero de hijos producidos en la ronda de reproduccion y además el parametro implicito se modifica despues de la ronda de reproduccion y R actualizado 
+\end{DoxyPostcond}
+
+
+Definición en la línea 25 del archivo Experiment.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordtype}{int} fills = 0;
+    \textcolor{keywordtype}{int} \textcolor{keyword}{final} = \hyperlink{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{mida};
+    \textcolor{keywordtype}{int} i = 0;
+    \textcolor{keywordtype}{int} j = 1;
+    vector<bool> aparicions(\textcolor{keyword}{final},\textcolor{keyword}{false});
+    \textcolor{keywordflow}{while} (j < \textcolor{keyword}{final} and \hyperlink{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{mida} != \hyperlink{class_experiment_a329359965b798fa1023b1b29d6ccf832}{MAXORGANISMES}) \{
+        \textcolor{keywordflow}{while} (i < \textcolor{keyword}{final} - 1 and (aparicions[i] or not \hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[i].esta\_vivo())) 
+      ++i;
+        j = i + 1;
+        \textcolor{keywordflow}{while} (j < \textcolor{keyword}{final} and (aparicions[j] or \hyperlink{class_experiment_a34a18593817af15f21bf185369081b5c}{emparellats}[i][j] or 
+      not \hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[j].esta\_vivo())) ++j;
+        \textcolor{keywordflow}{if} (j < \textcolor{keyword}{final} and i < \textcolor{keyword}{final} - 1) \{
+            \hyperlink{class_organisme}{Organisme} h;
+            h.\hyperlink{class_organisme_acaa3d638061c17bcabf92e391867e0d6}{reproduccion}(\hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[i],\hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[j]);
+            aparicions[i] = \textcolor{keyword}{true};
+            aparicions[j] = \textcolor{keyword}{true};
+            \hyperlink{class_experiment_a34a18593817af15f21bf185369081b5c}{emparellats}[i][j] = \textcolor{keyword}{true};
+            \hyperlink{class_experiment_a34a18593817af15f21bf185369081b5c}{emparellats}[j][i] = \textcolor{keyword}{true};
+            \textcolor{keywordflow}{if} (h.\hyperlink{class_organisme_ac6f8f199e61636ce7a6423cddc14561d}{esta\_vivo}()) \{
+                \hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[\hyperlink{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{mida}] = h;
+                ++\hyperlink{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{mida};
+                R.\hyperlink{class_ranking_a2d2aec44c0e24f7a60141b49221e3dbf}{actualizar\_ranking}(i,j,\hyperlink{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{mida});
+                ++fills;
+                ++\hyperlink{class_experiment_a6d9c9be557f9df1d3162494c2b305ba0}{vius};
+            \}
+        \}
+        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i < \textcolor{keyword}{final} - 1) \{
+            ++i;
+            j = i + 1;
+        \}
+    \}
+    \textcolor{keywordflow}{return} fills;
+\}
+\end{DoxyCode}
+\hypertarget{class_experiment_a2658473f47b7df935fb1e2b48159824d}{\index{Experiment@{Experiment}!estiron@{estiron}}
+\index{estiron@{estiron}!Experiment@{Experiment}}
+\subsubsection[{estiron}]{\setlength{\rightskip}{0pt plus 5cm}void Experiment\-::estiron (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}}\label{class_experiment_a2658473f47b7df935fb1e2b48159824d}
+
+
+Crecimiento de un organismo. 
+
+\begin{DoxyPrecond}{Precondición}
+1 $<$= x $<$= M y organisme x pot creixer 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El elemento xessimo del p.\-i. ha sufrido un estiron 
+\end{DoxyPostcond}
+
+
+Definición en la línea 59 del archivo Experiment.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} (\hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[x-1].consultar\_potcreixer()) \{
+        \hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[x-1].estiron();
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{class_experiment_a1c3d6fabc67e6d9f2a3f72e7845f5988}{\index{Experiment@{Experiment}!recorte@{recorte}}
+\index{recorte@{recorte}!Experiment@{Experiment}}
+\subsubsection[{recorte}]{\setlength{\rightskip}{0pt plus 5cm}void Experiment\-::recorte (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}}\label{class_experiment_a1c3d6fabc67e6d9f2a3f72e7845f5988}
+
+
+Decrecimiento de un organismo. 
+
+\begin{DoxyPrecond}{Precondición}
+1 $<$= x $<$= M y organisme x vivo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El elemento xessimo del p.\-i. ha sufrido un recorte 
+\end{DoxyPostcond}
+
+
+Definición en la línea 66 del archivo Experiment.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} (\hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[x-1].esta\_vivo()) \{
+        \hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[x-1].recorte();
+        \textcolor{keywordflow}{if} (not \hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[x-1].esta\_vivo()) --\hyperlink{class_experiment_a6d9c9be557f9df1d3162494c2b305ba0}{vius};
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{class_experiment_a32df1020a5b5e27949bd2bce272a36d9}{\index{Experiment@{Experiment}!tamano@{tamano}}
+\index{tamano@{tamano}!Experiment@{Experiment}}
+\subsubsection[{tamano}]{\setlength{\rightskip}{0pt plus 5cm}int Experiment\-::tamano (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_experiment_a32df1020a5b5e27949bd2bce272a36d9}
+
+
+Consultora de tamaño. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el numero de organismes del parametro implicito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 76 del archivo Experiment.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{return} \hyperlink{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{mida};
+\}
+\end{DoxyCode}
+\hypertarget{class_experiment_a333c9c8084c76beb6b8848b8f2efec25}{\index{Experiment@{Experiment}!tamano\-\_\-maximo@{tamano\-\_\-maximo}}
+\index{tamano\-\_\-maximo@{tamano\-\_\-maximo}!Experiment@{Experiment}}
+\subsubsection[{tamano\-\_\-maximo}]{\setlength{\rightskip}{0pt plus 5cm}int Experiment\-::tamano\-\_\-maximo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_experiment_a333c9c8084c76beb6b8848b8f2efec25}
+
+
+Consultora de tamaño máximo. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el maximo numero de organismes del parametro implicito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 81 del archivo Experiment.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{return} \hyperlink{class_experiment_a329359965b798fa1023b1b29d6ccf832}{MAXORGANISMES};
+\}
+\end{DoxyCode}
+\hypertarget{class_experiment_a1f1307d2224b32b4b642b7e545f655f6}{\index{Experiment@{Experiment}!consultar\-\_\-vius@{consultar\-\_\-vius}}
+\index{consultar\-\_\-vius@{consultar\-\_\-vius}!Experiment@{Experiment}}
+\subsubsection[{consultar\-\_\-vius}]{\setlength{\rightskip}{0pt plus 5cm}int Experiment\-::consultar\-\_\-vius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_experiment_a1f1307d2224b32b4b642b7e545f655f6}
+
+
+Consultora de organismos vivos. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el numero de organismes vivos del parametro implicito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 86 del archivo Experiment.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{return} \hyperlink{class_experiment_a6d9c9be557f9df1d3162494c2b305ba0}{vius};
+\}
+\end{DoxyCode}
+\hypertarget{class_experiment_af08a77ada723ccaaf6476a3c1331261c}{\index{Experiment@{Experiment}!muerto@{muerto}}
+\index{muerto@{muerto}!Experiment@{Experiment}}
+\subsubsection[{muerto}]{\setlength{\rightskip}{0pt plus 5cm}bool Experiment\-::muerto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_experiment_af08a77ada723ccaaf6476a3c1331261c}
+
+
+Consultora de muerte de todos los organismos. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es si todos los organismos estan muertos 
+\end{DoxyPostcond}
+
+
+Definición en la línea 91 del archivo Experiment.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{return} (\hyperlink{class_experiment_a6d9c9be557f9df1d3162494c2b305ba0}{vius} == 0);
+\}
+\end{DoxyCode}
+\hypertarget{class_experiment_a02185fb874c9439991a68ab436d084bf}{\index{Experiment@{Experiment}!leer\-\_\-experiment@{leer\-\_\-experiment}}
+\index{leer\-\_\-experiment@{leer\-\_\-experiment}!Experiment@{Experiment}}
+\subsubsection[{leer\-\_\-experiment}]{\setlength{\rightskip}{0pt plus 5cm}void Experiment\-::leer\-\_\-experiment (
+\begin{DoxyParamCaption}
+\item[{int}]{marca}
+\end{DoxyParamCaption}
+)}}\label{class_experiment_a02185fb874c9439991a68ab436d084bf}
+
+
+Operación de lectura. 
+
+\begin{DoxyPrecond}{Precondición}
+marca $<$ tamaño maximo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han leido los atributos del parámetro implícito en el canal standard de entrada. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 98 del archivo Experiment.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordtype}{int} num = 0;
+    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < marca; ++i) \{
+        ++num;
+        \hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[i].leer\_organisme(num);
+    \}
+    \hyperlink{class_experiment_a6d9c9be557f9df1d3162494c2b305ba0}{vius} = marca;
+    \hyperlink{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{mida} = marca;
+\}
+\end{DoxyCode}
+\hypertarget{class_experiment_ac2ae9b839376abeac7f65aaea846e70e}{\index{Experiment@{Experiment}!escribir\-\_\-organisme@{escribir\-\_\-organisme}}
+\index{escribir\-\_\-organisme@{escribir\-\_\-organisme}!Experiment@{Experiment}}
+\subsubsection[{escribir\-\_\-organisme}]{\setlength{\rightskip}{0pt plus 5cm}void Experiment\-::escribir\-\_\-organisme (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}}\label{class_experiment_ac2ae9b839376abeac7f65aaea846e70e}
+
+
+Operación de escritura de un organisme del experiment. 
+
+\begin{DoxyPrecond}{Precondición}
+1 $<$= x $<$= M 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos del elemento xessimo del p.\-i. en el canal standard de salida. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 111 del archivo Experiment.\-cpp.
+
+
+\begin{DoxyCode}
+\{    
+    \textcolor{keywordflow}{if} (x <= \hyperlink{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{mida}) \{
+        cout << x << \textcolor{stringliteral}{" : "};
+        \hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[x-1].escribir\_organisme();
+        cout << endl;
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{class_experiment_a7306fc6afaffe4783774d58e05efc10c}{\index{Experiment@{Experiment}!escribir\-\_\-ultims@{escribir\-\_\-ultims}}
+\index{escribir\-\_\-ultims@{escribir\-\_\-ultims}!Experiment@{Experiment}}
+\subsubsection[{escribir\-\_\-ultims}]{\setlength{\rightskip}{0pt plus 5cm}void Experiment\-::escribir\-\_\-ultims (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}}\label{class_experiment_a7306fc6afaffe4783774d58e05efc10c}
+
+
+Operación de escritura de los ultimos hijos de la ronda. 
+
+\begin{DoxyPrecond}{Precondición}
+1 $<$= x $<$= M 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos del los ultimos x organismes del p.\-i. en la ultima ronda de reproduccion en el canal standard de salida. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 120 del archivo Experiment.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = \hyperlink{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{mida} - x; i < \hyperlink{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{mida}; ++i) \{
+        cout << i + 1 << \textcolor{stringliteral}{" : "};
+        \hyperlink{class_experiment_a2d3539cb5f6996e83a7d687538411501}{EXP}[i].escribir\_organisme();
+        cout << endl;
+    \}
+
+\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_experiment_a329359965b798fa1023b1b29d6ccf832}{\index{Experiment@{Experiment}!M\-A\-X\-O\-R\-G\-A\-N\-I\-S\-M\-E\-S@{M\-A\-X\-O\-R\-G\-A\-N\-I\-S\-M\-E\-S}}
+\index{M\-A\-X\-O\-R\-G\-A\-N\-I\-S\-M\-E\-S@{M\-A\-X\-O\-R\-G\-A\-N\-I\-S\-M\-E\-S}!Experiment@{Experiment}}
+\subsubsection[{M\-A\-X\-O\-R\-G\-A\-N\-I\-S\-M\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}int Experiment\-::\-M\-A\-X\-O\-R\-G\-A\-N\-I\-S\-M\-E\-S\hspace{0.3cm}{\ttfamily [private]}}}\label{class_experiment_a329359965b798fa1023b1b29d6ccf832}
+
+
+Indica los maximos organismos posibles del experiment. 
+
+
+
+Definición en la línea 21 del archivo Experiment.\-hpp.
+
+\hypertarget{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}{\index{Experiment@{Experiment}!mida@{mida}}
+\index{mida@{mida}!Experiment@{Experiment}}
+\subsubsection[{mida}]{\setlength{\rightskip}{0pt plus 5cm}int Experiment\-::mida\hspace{0.3cm}{\ttfamily [private]}}}\label{class_experiment_aec56e0b0a0cda4d67ce25a0921d9ebf7}
+
+
+Indica los organismos vivos y muertos del experiment. 
+
+
+
+Definición en la línea 23 del archivo Experiment.\-hpp.
+
+\hypertarget{class_experiment_a6d9c9be557f9df1d3162494c2b305ba0}{\index{Experiment@{Experiment}!vius@{vius}}
+\index{vius@{vius}!Experiment@{Experiment}}
+\subsubsection[{vius}]{\setlength{\rightskip}{0pt plus 5cm}int Experiment\-::vius\hspace{0.3cm}{\ttfamily [private]}}}\label{class_experiment_a6d9c9be557f9df1d3162494c2b305ba0}
+
+
+Indica los organismos vivos del experiment. 
+
+
+
+Definición en la línea 25 del archivo Experiment.\-hpp.
+
+\hypertarget{class_experiment_a2d3539cb5f6996e83a7d687538411501}{\index{Experiment@{Experiment}!E\-X\-P@{E\-X\-P}}
+\index{E\-X\-P@{E\-X\-P}!Experiment@{Experiment}}
+\subsubsection[{E\-X\-P}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Organisme}$>$ Experiment\-::\-E\-X\-P\hspace{0.3cm}{\ttfamily [private]}}}\label{class_experiment_a2d3539cb5f6996e83a7d687538411501}
+
+
+Sequencia de todos los organismes del experiment. 
+
+
+
+Definición en la línea 27 del archivo Experiment.\-hpp.
+
+\hypertarget{class_experiment_a34a18593817af15f21bf185369081b5c}{\index{Experiment@{Experiment}!emparellats@{emparellats}}
+\index{emparellats@{emparellats}!Experiment@{Experiment}}
+\subsubsection[{emparellats}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$vector$<$bool$>$ $>$ Experiment\-::emparellats\hspace{0.3cm}{\ttfamily [private]}}}\label{class_experiment_a34a18593817af15f21bf185369081b5c}
+
+
+Matriu que indica si dos organismos se han reproducido (true) o no (false) 
+
+
+
+Definición en la línea 29 del archivo Experiment.\-hpp.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_experiment_8hpp}{Experiment.\-hpp}\item 
+\hyperlink{_experiment_8cpp}{Experiment.\-cpp}\end{DoxyCompactItemize}

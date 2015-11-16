@@ -1,0 +1,936 @@
+\hypertarget{class_organisme}{\section{Referencia de la Clase Organisme}
+\label{class_organisme}\index{Organisme@{Organisme}}
+}
+
+
+Representa un organisme como arbol de celulas, el máximo identificador y si puede crecer o no.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_organisme_a5624eb8adf14bc96d783067d51605fbd}{Organisme} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+\hyperlink{class_organisme_a185bb1fe4199489f8c36b6ad53bdd562}{Organisme} (const \hyperlink{class_organisme}{Organisme} \&o)
+\begin{DoxyCompactList}\small\item\em Creadora copiadora. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_acdc2be53a7fabf324235c19b313bf662}{estiron} ()
+\begin{DoxyCompactList}\small\item\em Crecimiento de un organisme. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_ac45268062b8cd33a3a3ab5e70cb2403d}{recorte} ()
+\begin{DoxyCompactList}\small\item\em Decrecimiento de un organisme. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_acaa3d638061c17bcabf92e391867e0d6}{reproduccion} (\hyperlink{class_organisme}{Organisme} \&m, \hyperlink{class_organisme}{Organisme} \&n)
+\begin{DoxyCompactList}\small\item\em Reproducción de organismes. \end{DoxyCompactList}\item 
+bool \hyperlink{class_organisme_ac6f8f199e61636ce7a6423cddc14561d}{esta\-\_\-vivo} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de vida de un organisme. \end{DoxyCompactList}\item 
+int \hyperlink{class_organisme_ac215686620dc98397493f2b6cfe37735}{consultar\-\_\-tamano} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de tamaño del organisme. \end{DoxyCompactList}\item 
+int \hyperlink{class_organisme_aebe855cdb3f44a278c18d21912f60301}{consultar\-\_\-id} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de maximo identificador. \end{DoxyCompactList}\item 
+int \hyperlink{class_organisme_a42ffae8888c18bafb3cca2d4140cd2cf}{consultar\-\_\-maxid} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de maximo identificador. \end{DoxyCompactList}\item 
+bool \hyperlink{class_organisme_a650fae6627523a55b2941c47d0cc3b82}{consultar\-\_\-potcreixer} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de posibilidad de crecer. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_ae53bdafd0b8cf07483aa02ef5e8498cb}{leer\-\_\-organisme} (int \&num)
+\begin{DoxyCompactList}\small\item\em Operación de lectura. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_ac8184de74f9e451daae0c2efed9d1499}{escribir\-\_\-organisme} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_organisme_a00b103256f3fb0b95a074a9b06de14ac}{interseccion} (Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \&a, Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Tamaño de la interseccion entre dos organismes. \end{DoxyCompactList}\item 
+bool \hyperlink{class_organisme_a054a7723a2083af4c182b8f0266ec54c}{compatibles} (\hyperlink{class_organisme}{Organisme} \&a, \hyperlink{class_organisme}{Organisme} \&b)
+\begin{DoxyCompactList}\small\item\em Compatibilidad entre dos organismes. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_ab90a2daa639560e569d8de05297b47b6}{crece} (Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Immersion de estiron. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_a7a0d6dc7f9de023d5dc33bd024a4b161}{decrece} (Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \&a, bool \&canviamax)
+\begin{DoxyCompactList}\small\item\em Immersion de recorte. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_a75f7f37f4c89327fcc3376ea98ccc97c}{i\-\_\-leer\-\_\-organisme} (Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \&a, int marca)
+\begin{DoxyCompactList}\small\item\em Immersion de lectura del organisme. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_ac88ecbfd1eafc62ba3744ed104626ab5}{i\-\_\-escribir\-\_\-organisme} (Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Immersion de escritura del organisme. \end{DoxyCompactList}\item 
+bool \hyperlink{class_organisme_a52d94598bdac2bcf8264f3cc48b7193a}{te\-\_\-activa} (Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Tamaño de la interseccion entre dos organismes. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_a3344f2b519e7b3bd296803d5e37ecfc1}{i\-\_\-reproduccion} (Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \&m, Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \&n, Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \&h, int \&maximid, int \&tamanofill, bool \&casraro)
+\begin{DoxyCompactList}\small\item\em Immersion de la reproduccion. \end{DoxyCompactList}\item 
+void \hyperlink{class_organisme_a187a622878cb4d617aa326aac94787b4}{buscar\-\_\-maxid} (Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \&a, int \&max)
+\begin{DoxyCompactList}\small\item\em Busqueda del id maximo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Arbre$<$ \hyperlink{class_celula}{Celula} $>$ \hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ}
+\begin{DoxyCompactList}\small\item\em Arbre de totes les celules del organisme. \end{DoxyCompactList}\item 
+bool \hyperlink{class_organisme_a7b2b434f51af578ace7b37993aedd4f9}{potcreixer}
+\begin{DoxyCompactList}\small\item\em Indica si puede crecer (true) o no (false) \end{DoxyCompactList}\item 
+int \hyperlink{class_organisme_ac2f0882eb2985d187f189fd238ceece3}{id}
+\begin{DoxyCompactList}\small\item\em Identificador del organisme. \end{DoxyCompactList}\item 
+int \hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid}
+\begin{DoxyCompactList}\small\item\em Identificador máximo de un organisme. \end{DoxyCompactList}\item 
+int \hyperlink{class_organisme_a03277939e7c5be36d0ee183ae6fa99c4}{tamano}
+\begin{DoxyCompactList}\small\item\em Indica el tamaño del organisme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un organisme como arbol de celulas, el máximo identificador y si puede crecer o no. 
+
+Definición en la línea 15 del archivo Organisme.\-hpp.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{class_organisme_a5624eb8adf14bc96d783067d51605fbd}{\index{Organisme@{Organisme}!Organisme@{Organisme}}
+\index{Organisme@{Organisme}!Organisme@{Organisme}}
+\subsubsection[{Organisme}]{\setlength{\rightskip}{0pt plus 5cm}Organisme\-::\-Organisme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_a5624eb8adf14bc96d783067d51605fbd}
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar un organisme. \begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un organisme vacio 
+\end{DoxyPostcond}
+
+
+Definición en la línea 235 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \hyperlink{class_organisme_a03277939e7c5be36d0ee183ae6fa99c4}{tamano} = 0;
+    \textcolor{keywordtype}{id} = 0;
+    \hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid} = 0;
+    \hyperlink{class_organisme_a7b2b434f51af578ace7b37993aedd4f9}{potcreixer} = \textcolor{keyword}{true};
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_a185bb1fe4199489f8c36b6ad53bdd562}{\index{Organisme@{Organisme}!Organisme@{Organisme}}
+\index{Organisme@{Organisme}!Organisme@{Organisme}}
+\subsubsection[{Organisme}]{\setlength{\rightskip}{0pt plus 5cm}Organisme\-::\-Organisme (
+\begin{DoxyParamCaption}
+\item[{const {\bf Organisme} \&}]{o}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_a185bb1fe4199489f8c36b6ad53bdd562}
+
+
+Creadora copiadora. 
+
+Permite declarar un organisme nuevo como copia de otro ya existente. \begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un organisme igual que o 
+\end{DoxyPostcond}
+
+
+Definición en la línea 243 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ} = o.\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ};
+    \hyperlink{class_organisme_a7b2b434f51af578ace7b37993aedd4f9}{potcreixer} = o.\hyperlink{class_organisme_a7b2b434f51af578ace7b37993aedd4f9}{potcreixer};
+    \textcolor{keywordtype}{id} = o.\hyperlink{class_organisme_ac2f0882eb2985d187f189fd238ceece3}{id};
+    \hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid} = o.\hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid};
+\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_organisme_a00b103256f3fb0b95a074a9b06de14ac}{\index{Organisme@{Organisme}!interseccion@{interseccion}}
+\index{interseccion@{interseccion}!Organisme@{Organisme}}
+\subsubsection[{interseccion}]{\setlength{\rightskip}{0pt plus 5cm}int Organisme\-::interseccion (
+\begin{DoxyParamCaption}
+\item[{Arbre$<$ {\bf Celula} $>$ \&}]{a, }
+\item[{Arbre$<$ {\bf Celula} $>$ \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a00b103256f3fb0b95a074a9b06de14ac}
+
+
+Tamaño de la interseccion entre dos organismes. 
+
+\begin{DoxyPrecond}{Precondición}
+a = A, b = B 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el tamaño de la intersección entre A y B 
+\end{DoxyPostcond}
+
+
+Definición en la línea 9 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} (a.es\_buit() or b.es\_buit()) \{
+        \textcolor{keywordflow}{return} 0;
+    \}
+    \textcolor{keywordflow}{else} \{
+        Arbre<Celula> a1,a2,b1,b2;
+        \hyperlink{class_celula}{Celula} c1 = a.arrel();
+        \hyperlink{class_celula}{Celula} c2 = b.arrel();
+        a.fills(a1,a2);
+        b.fills(b1,b2);
+        \textcolor{keywordtype}{int} x = \hyperlink{class_organisme_a00b103256f3fb0b95a074a9b06de14ac}{interseccion}(a1,b1);
+        \textcolor{keywordtype}{int} y = \hyperlink{class_organisme_a00b103256f3fb0b95a074a9b06de14ac}{interseccion}(a2,b2);
+        a.plantar(c1,a1,a2);
+        b.plantar(c2,b1,b2);
+        \textcolor{keywordflow}{return} x + y + 1;
+    \}
+
+
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_a054a7723a2083af4c182b8f0266ec54c}{\index{Organisme@{Organisme}!compatibles@{compatibles}}
+\index{compatibles@{compatibles}!Organisme@{Organisme}}
+\subsubsection[{compatibles}]{\setlength{\rightskip}{0pt plus 5cm}bool Organisme\-::compatibles (
+\begin{DoxyParamCaption}
+\item[{{\bf Organisme} \&}]{a, }
+\item[{{\bf Organisme} \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a054a7723a2083af4c182b8f0266ec54c}
+
+
+Compatibilidad entre dos organismes. 
+
+\begin{DoxyPrecond}{Precondición}
+a = A, b = B 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es si A y B son compatibles (true) o no (false) 
+\end{DoxyPostcond}
+
+
+Definición en la línea 30 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordtype}{int} mida = \hyperlink{class_organisme_a00b103256f3fb0b95a074a9b06de14ac}{interseccion}(a.\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ},b.\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ});
+    \textcolor{keywordflow}{return} (mida >= \textcolor{keywordtype}{int}((a.\hyperlink{class_organisme_ac215686620dc98397493f2b6cfe37735}{consultar\_tamano}() + b.
+      \hyperlink{class_organisme_ac215686620dc98397493f2b6cfe37735}{consultar\_tamano}())/4));
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_ab90a2daa639560e569d8de05297b47b6}{\index{Organisme@{Organisme}!crece@{crece}}
+\index{crece@{crece}!Organisme@{Organisme}}
+\subsubsection[{crece}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::crece (
+\begin{DoxyParamCaption}
+\item[{Arbre$<$ {\bf Celula} $>$ \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_ab90a2daa639560e569d8de05297b47b6}
+
+
+Immersion de estiron. 
+
+\begin{DoxyPrecond}{Precondición}
+a = A 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+A ha sufrido un estiron 
+\end{DoxyPostcond}
+
+
+Definición en la línea 36 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} (not a.es\_buit()) \{
+        Arbre<Celula> a1, a2;
+        \hyperlink{class_celula}{Celula} c;
+        c = a.arrel();
+        a.fills(a1,a2);
+        \textcolor{keywordflow}{if} (a1.es\_buit() and a2.es\_buit()) \{
+            \hyperlink{class_celula}{Celula} c1(c);
+            \hyperlink{class_celula}{Celula} c2(c);
+            ++\hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid};
+            c1.modificar\_id(\hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid});
+            ++\hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid};
+            c2.modificar\_id(\hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid});
+            \hyperlink{class_organisme_a03277939e7c5be36d0ee183ae6fa99c4}{tamano} += 2;
+            Arbre<Celula> aux1 = a1;
+            Arbre<Celula> aux2 = a2;
+            a1.plantar(c1,aux1,aux2);
+            a2.plantar(c2,aux1,aux2);
+            a.plantar(c,a1,a2);
+        \}
+        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (a1.es\_buit()) \{
+            \hyperlink{class_organisme_ab90a2daa639560e569d8de05297b47b6}{crece}(a2);
+            a.plantar(c,a1,a2);
+        \}
+        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (a2.es\_buit()) \{
+            \hyperlink{class_organisme_ab90a2daa639560e569d8de05297b47b6}{crece}(a1);
+            a.plantar(c,a1,a2);
+        \}
+        \textcolor{keywordflow}{else} \{
+            \hyperlink{class_organisme_ab90a2daa639560e569d8de05297b47b6}{crece}(a1);
+            \hyperlink{class_organisme_ab90a2daa639560e569d8de05297b47b6}{crece}(a2);
+            a.plantar(c,a1,a2);
+        \}
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_a7a0d6dc7f9de023d5dc33bd024a4b161}{\index{Organisme@{Organisme}!decrece@{decrece}}
+\index{decrece@{decrece}!Organisme@{Organisme}}
+\subsubsection[{decrece}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::decrece (
+\begin{DoxyParamCaption}
+\item[{Arbre$<$ {\bf Celula} $>$ \&}]{a, }
+\item[{bool \&}]{canviamax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a7a0d6dc7f9de023d5dc33bd024a4b161}
+
+
+Immersion de recorte. 
+
+\begin{DoxyPrecond}{Precondición}
+a = A 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+A ha sufrido un recorte y canviamax indica si la maxid de A ha cambiado 
+\end{DoxyPostcond}
+
+
+Definición en la línea 73 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} (not a.es\_buit()) \{
+        Arbre<Celula> a1, a2;
+        \hyperlink{class_celula}{Celula} c = a.arrel();
+        a.fills(a1,a2);
+        \textcolor{keywordflow}{if} (a1.es\_buit() and a2.es\_buit()) \{
+            --\hyperlink{class_organisme_a03277939e7c5be36d0ee183ae6fa99c4}{tamano};
+            \textcolor{keywordflow}{if} (c.\hyperlink{class_celula_adfe788cb113f6e8dcf9def377a248255}{consultar\_id}() == \hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid}) canviamax = \textcolor{keyword}{true};
+        \}
+        \textcolor{keywordflow}{else} \{
+            \textcolor{keywordflow}{if} (a1.es\_buit()) \{
+            \hyperlink{class_organisme_a7a0d6dc7f9de023d5dc33bd024a4b161}{decrece}(a2,canviamax);
+            a.plantar(c,a1,a2);
+            \}
+            \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (a2.es\_buit()) \{
+            \hyperlink{class_organisme_a7a0d6dc7f9de023d5dc33bd024a4b161}{decrece}(a1,canviamax);
+            a.plantar(c,a1,a2);
+            \}
+            \textcolor{keywordflow}{else} \{
+            \hyperlink{class_organisme_a7a0d6dc7f9de023d5dc33bd024a4b161}{decrece}(a1,canviamax);
+            \hyperlink{class_organisme_a7a0d6dc7f9de023d5dc33bd024a4b161}{decrece}(a2,canviamax);
+            a.plantar(c,a1,a2);
+            \}
+        \}
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_a75f7f37f4c89327fcc3376ea98ccc97c}{\index{Organisme@{Organisme}!i\-\_\-leer\-\_\-organisme@{i\-\_\-leer\-\_\-organisme}}
+\index{i\-\_\-leer\-\_\-organisme@{i\-\_\-leer\-\_\-organisme}!Organisme@{Organisme}}
+\subsubsection[{i\-\_\-leer\-\_\-organisme}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::i\-\_\-leer\-\_\-organisme (
+\begin{DoxyParamCaption}
+\item[{Arbre$<$ {\bf Celula} $>$ \&}]{a, }
+\item[{int}]{marca}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a75f7f37f4c89327fcc3376ea98ccc97c}
+
+
+Immersion de lectura del organisme. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han leido los atributos del parámetro implícito en el canal standard de entrada. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 101 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    Arbre<Celula> a1, a2;
+    \hyperlink{class_celula}{Celula} c;
+    c.\hyperlink{class_celula_a975bfa82da9b298581d0df62102a394c}{leer\_celula}();
+    \textcolor{keywordflow}{if} (c.\hyperlink{class_celula_adfe788cb113f6e8dcf9def377a248255}{consultar\_id}() != marca) \{
+        ++\hyperlink{class_organisme_a03277939e7c5be36d0ee183ae6fa99c4}{tamano};
+        \textcolor{keywordflow}{if} (c.\hyperlink{class_celula_adfe788cb113f6e8dcf9def377a248255}{consultar\_id}() > \hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid}) \hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid} = c.
+      \hyperlink{class_celula_adfe788cb113f6e8dcf9def377a248255}{consultar\_id}();
+        \hyperlink{class_organisme_a75f7f37f4c89327fcc3376ea98ccc97c}{i\_leer\_organisme}(a1,marca);
+        \hyperlink{class_organisme_a75f7f37f4c89327fcc3376ea98ccc97c}{i\_leer\_organisme}(a2,marca);
+        a.plantar(c,a1,a2);
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_ac88ecbfd1eafc62ba3744ed104626ab5}{\index{Organisme@{Organisme}!i\-\_\-escribir\-\_\-organisme@{i\-\_\-escribir\-\_\-organisme}}
+\index{i\-\_\-escribir\-\_\-organisme@{i\-\_\-escribir\-\_\-organisme}!Organisme@{Organisme}}
+\subsubsection[{i\-\_\-escribir\-\_\-organisme}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::i\-\_\-escribir\-\_\-organisme (
+\begin{DoxyParamCaption}
+\item[{Arbre$<$ {\bf Celula} $>$ \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_ac88ecbfd1eafc62ba3744ed104626ab5}
+
+
+Immersion de escritura del organisme. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos del parámetro implícito en el canal standard de salida 
+\end{DoxyPostcond}
+
+
+Definición en la línea 115 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} (a.es\_buit()) \{
+        cout << \textcolor{stringliteral}{"0 "};
+    \}
+    \textcolor{keywordflow}{else} \{
+        Arbre<Celula> a1, a2;
+        \hyperlink{class_celula}{Celula} c = a.arrel();
+        a.fills(a1,a2);
+        \hyperlink{class_organisme_ac88ecbfd1eafc62ba3744ed104626ab5}{i\_escribir\_organisme}(a1);
+        c.\hyperlink{class_celula_ae476459eced4dd9982795efdc9a1c5fd}{escribir\_celula}();
+        \hyperlink{class_organisme_ac88ecbfd1eafc62ba3744ed104626ab5}{i\_escribir\_organisme}(a2);
+        a.plantar(c,a1,a2);
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_a52d94598bdac2bcf8264f3cc48b7193a}{\index{Organisme@{Organisme}!te\-\_\-activa@{te\-\_\-activa}}
+\index{te\-\_\-activa@{te\-\_\-activa}!Organisme@{Organisme}}
+\subsubsection[{te\-\_\-activa}]{\setlength{\rightskip}{0pt plus 5cm}bool Organisme\-::te\-\_\-activa (
+\begin{DoxyParamCaption}
+\item[{Arbre$<$ {\bf Celula} $>$ \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a52d94598bdac2bcf8264f3cc48b7193a}
+
+
+Tamaño de la interseccion entre dos organismes. 
+
+\begin{DoxyPrecond}{Precondición}
+a = A 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es si A tiene alguna celula activa (true) o no (false) 
+\end{DoxyPostcond}
+
+
+Definición en la línea 131 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} (a.es\_buit()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+    \textcolor{keywordflow}{else} \{
+        \hyperlink{class_celula}{Celula} c = a.arrel();
+        \textcolor{keywordflow}{if} (c.\hyperlink{class_celula_a750270ff8277447af6cc3a122d585aab}{consultar\_activa}()) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+        \textcolor{keywordflow}{else} \{
+            Arbre<Celula> a1, a2;
+            a.fills(a1,a2);
+            \textcolor{keywordtype}{bool} trobat = (\hyperlink{class_organisme_a52d94598bdac2bcf8264f3cc48b7193a}{te\_activa}(a1) or \hyperlink{class_organisme_a52d94598bdac2bcf8264f3cc48b7193a}{te\_activa}(a2));
+            a.plantar(c,a1,a2);
+            return trobat;
+        \}
+    \}
+
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_a3344f2b519e7b3bd296803d5e37ecfc1}{\index{Organisme@{Organisme}!i\-\_\-reproduccion@{i\-\_\-reproduccion}}
+\index{i\-\_\-reproduccion@{i\-\_\-reproduccion}!Organisme@{Organisme}}
+\subsubsection[{i\-\_\-reproduccion}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::i\-\_\-reproduccion (
+\begin{DoxyParamCaption}
+\item[{Arbre$<$ {\bf Celula} $>$ \&}]{m, }
+\item[{Arbre$<$ {\bf Celula} $>$ \&}]{n, }
+\item[{Arbre$<$ {\bf Celula} $>$ \&}]{h, }
+\item[{int \&}]{maximid, }
+\item[{int \&}]{tamanofill, }
+\item[{bool \&}]{casraro}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a3344f2b519e7b3bd296803d5e37ecfc1}
+
+
+Immersion de la reproduccion. 
+
+\begin{DoxyPrecond}{Precondición}
+maximid es el identificador maximo de m y h es el hijo de la reproduccion de entre m y n y m y n son compatibles 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+h contiene el organisme hijo resultante de la reproduccion entre m y n 
+\end{DoxyPostcond}
+
+
+Definición en la línea 148 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} (not m.es\_buit() and not n.es\_buit()) \{
+        Arbre<Celula> m1,m2,n1,n2,h1,h2;
+        \hyperlink{class_celula}{Celula} c1 = m.arrel();
+        \hyperlink{class_celula}{Celula} c2 = n.arrel();
+        \hyperlink{class_celula}{Celula} aux(c1);
+        \textcolor{keywordflow}{if} (not c1.\hyperlink{class_celula_a750270ff8277447af6cc3a122d585aab}{consultar\_activa}() and not c2.
+      \hyperlink{class_celula_a750270ff8277447af6cc3a122d585aab}{consultar\_activa}()) \{
+            h.plantar(aux,m1,m2);
+            ++tamanofill;
+        \}
+        \textcolor{keywordflow}{else} \{
+            aux.modificar\_activa(\textcolor{keyword}{true});
+            h.plantar(aux,m1,m2);
+            ++tamanofill;
+        \}
+        m.fills(m1,m2);
+        n.fills(n1,n2);
+        h.fills(h1,h2);
+        \hyperlink{class_organisme_a3344f2b519e7b3bd296803d5e37ecfc1}{i\_reproduccion}(m1,n1,h1,maximid,tamanofill,casoraro);
+        \hyperlink{class_organisme_a3344f2b519e7b3bd296803d5e37ecfc1}{i\_reproduccion}(m2,n2,h2,maximid,tamanofill,casoraro);
+        m.plantar(c1,m1,m2);
+        n.plantar(c2,n1,n2);
+        h.plantar(aux,h1,h2);
+    \}
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not m.es\_buit() and n.es\_buit()) \{
+        \textcolor{keywordflow}{if} (\hyperlink{class_organisme_a52d94598bdac2bcf8264f3cc48b7193a}{te\_activa}(m)) \{
+            Arbre<Celula> m1,m2,h1,h2;
+            \hyperlink{class_celula}{Celula} c1 = m.arrel();
+            h.plantar(c1,m1,m2);
+            ++tamanofill;
+            m.fills(m1,m2);
+            h.fills(h1,h2);
+            \hyperlink{class_organisme_a3344f2b519e7b3bd296803d5e37ecfc1}{i\_reproduccion}(m1,n,h1,maximid,tamanofill,casoraro);
+            \hyperlink{class_organisme_a3344f2b519e7b3bd296803d5e37ecfc1}{i\_reproduccion}(m2,n,h2,maximid,tamanofill,casoraro);
+            m.plantar(c1,m1,m2);
+            h.plantar(c1,h1,h2);
+        \}
+    \}
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (m.es\_buit() and not n.es\_buit()) \{
+        \textcolor{keywordflow}{if} (\hyperlink{class_organisme_a52d94598bdac2bcf8264f3cc48b7193a}{te\_activa}(n)) \{
+            casoraro = \textcolor{keyword}{true};
+            Arbre<Celula> n1,n2,h1,h2;
+            \hyperlink{class_celula}{Celula} c1 = n.arrel();
+            \hyperlink{class_celula}{Celula} aux(c1);
+            ++maximid;
+            aux.modificar\_id(maximid);
+            h.plantar(aux,n1,n2);
+            ++tamanofill;
+            n.fills(n1,n2);
+            h.fills(h1,h2);
+            \hyperlink{class_organisme_a3344f2b519e7b3bd296803d5e37ecfc1}{i\_reproduccion}(m,n1,h1,maximid,tamanofill,casoraro);
+            \hyperlink{class_organisme_a3344f2b519e7b3bd296803d5e37ecfc1}{i\_reproduccion}(m,n2,h2,maximid,tamanofill,casoraro);
+            n.plantar(c1,n1,n2);
+            h.plantar(aux,h1,h2);
+        \}
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_a187a622878cb4d617aa326aac94787b4}{\index{Organisme@{Organisme}!buscar\-\_\-maxid@{buscar\-\_\-maxid}}
+\index{buscar\-\_\-maxid@{buscar\-\_\-maxid}!Organisme@{Organisme}}
+\subsubsection[{buscar\-\_\-maxid}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::buscar\-\_\-maxid (
+\begin{DoxyParamCaption}
+\item[{Arbre$<$ {\bf Celula} $>$ \&}]{a, }
+\item[{int \&}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a187a622878cb4d617aa326aac94787b4}
+
+
+Busqueda del id maximo. 
+
+\begin{DoxyPrecond}{Precondición}
+a = A, max = 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+max indica el maxim id del arbre A 
+\end{DoxyPostcond}
+
+
+Definición en la línea 207 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} (not a.es\_buit()) \{
+        Arbre<Celula> a1,a2;
+        \hyperlink{class_celula}{Celula} c = a.arrel();
+        a.fills(a1,a2);
+        \textcolor{keywordflow}{if} (c.\hyperlink{class_celula_adfe788cb113f6e8dcf9def377a248255}{consultar\_id}() > max) max = c.\hyperlink{class_celula_adfe788cb113f6e8dcf9def377a248255}{consultar\_id}
+      ();
+        \textcolor{keywordflow}{if} (not a1.es\_buit() and a2.es\_buit()) \{
+            \hyperlink{class_organisme_a187a622878cb4d617aa326aac94787b4}{buscar\_maxid}(a1,max);
+            a.plantar(c,a1,a2);
+        \}
+        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (a1.es\_buit() and not a2.es\_buit()) \{
+            \hyperlink{class_organisme_a187a622878cb4d617aa326aac94787b4}{buscar\_maxid}(a2,max);
+            a.plantar(c,a1,a2);
+        \}
+        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not a1.es\_buit() and not a2.es\_buit()) \{
+            \textcolor{keywordtype}{int} max2 = 0;
+            \hyperlink{class_organisme_a187a622878cb4d617aa326aac94787b4}{buscar\_maxid}(a1,max);
+            \hyperlink{class_organisme_a187a622878cb4d617aa326aac94787b4}{buscar\_maxid}(a2,max2);
+            \textcolor{keywordflow}{if} (max2 > max) max = max2;
+            a.plantar(c,a1,a2);
+        \}
+        \textcolor{keywordflow}{else} a.plantar(c,a1,a2);
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_acdc2be53a7fabf324235c19b313bf662}{\index{Organisme@{Organisme}!estiron@{estiron}}
+\index{estiron@{estiron}!Organisme@{Organisme}}
+\subsubsection[{estiron}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::estiron (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_acdc2be53a7fabf324235c19b313bf662}
+
+
+Crecimiento de un organisme. 
+
+\begin{DoxyPrecond}{Precondición}
+potcreixer = true 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parametro implícito sufre un estirón 
+\end{DoxyPostcond}
+
+
+Definición en la línea 253 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \hyperlink{class_organisme_ab90a2daa639560e569d8de05297b47b6}{crece}(\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ});
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_ac45268062b8cd33a3a3ab5e70cb2403d}{\index{Organisme@{Organisme}!recorte@{recorte}}
+\index{recorte@{recorte}!Organisme@{Organisme}}
+\subsubsection[{recorte}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::recorte (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_ac45268062b8cd33a3a3ab5e70cb2403d}
+
+
+Decrecimiento de un organisme. 
+
+\begin{DoxyPrecond}{Precondición}
+El parametro implícito esta vivo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parametro implícito sufre un recorte 
+\end{DoxyPostcond}
+
+
+Definición en la línea 258 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordtype}{bool} canviamax = \textcolor{keyword}{false};
+    \hyperlink{class_organisme_a7a0d6dc7f9de023d5dc33bd024a4b161}{decrece}(\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ},canviamax);
+    \hyperlink{class_organisme_a7b2b434f51af578ace7b37993aedd4f9}{potcreixer} = \textcolor{keyword}{false};
+    \textcolor{keywordflow}{if} (canviamax) \{
+        \textcolor{keywordtype}{int} max = 0;
+        \hyperlink{class_organisme_a187a622878cb4d617aa326aac94787b4}{buscar\_maxid}(\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ},max);
+        \hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid} = max;
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_acaa3d638061c17bcabf92e391867e0d6}{\index{Organisme@{Organisme}!reproduccion@{reproduccion}}
+\index{reproduccion@{reproduccion}!Organisme@{Organisme}}
+\subsubsection[{reproduccion}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::reproduccion (
+\begin{DoxyParamCaption}
+\item[{{\bf Organisme} \&}]{m, }
+\item[{{\bf Organisme} \&}]{n}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_acaa3d638061c17bcabf92e391867e0d6}
+
+
+Reproducción de organismes. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El p.\-i. (hijo) es el organsime resultante de la reproduccion de m y n si m y n son compatibles, altramente no hace nada. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 270 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} ((m.\hyperlink{class_organisme_ac6f8f199e61636ce7a6423cddc14561d}{esta\_vivo}() and n.\hyperlink{class_organisme_ac6f8f199e61636ce7a6423cddc14561d}{esta\_vivo}()) and \hyperlink{class_organisme_a054a7723a2083af4c182b8f0266ec54c}{compatibles}
+      (m,n)) \{
+        \textcolor{keywordtype}{bool} casoraro = \textcolor{keyword}{false};
+        \textcolor{keywordtype}{int} maximid = m.\hyperlink{class_organisme_a42ffae8888c18bafb3cca2d4140cd2cf}{consultar\_maxid}();
+        \hyperlink{class_organisme_a3344f2b519e7b3bd296803d5e37ecfc1}{i\_reproduccion}(m.\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ},n.\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ},\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ},
+      maximid,\hyperlink{class_organisme_a03277939e7c5be36d0ee183ae6fa99c4}{tamano},casoraro);
+        \textcolor{keywordflow}{if} (not casoraro) \{
+            maximid = 0;
+            \hyperlink{class_organisme_a187a622878cb4d617aa326aac94787b4}{buscar\_maxid}(\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ},maximid);
+        \}
+        \hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid} = maximid;
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_ac6f8f199e61636ce7a6423cddc14561d}{\index{Organisme@{Organisme}!esta\-\_\-vivo@{esta\-\_\-vivo}}
+\index{esta\-\_\-vivo@{esta\-\_\-vivo}!Organisme@{Organisme}}
+\subsubsection[{esta\-\_\-vivo}]{\setlength{\rightskip}{0pt plus 5cm}bool Organisme\-::esta\-\_\-vivo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_organisme_ac6f8f199e61636ce7a6423cddc14561d}
+
+
+Consultora de vida de un organisme. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es si el parametro implícito esta vivo o no 
+\end{DoxyPostcond}
+
+
+Definición en la línea 286 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{if} (\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ}.es\_buit()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_ac215686620dc98397493f2b6cfe37735}{\index{Organisme@{Organisme}!consultar\-\_\-tamano@{consultar\-\_\-tamano}}
+\index{consultar\-\_\-tamano@{consultar\-\_\-tamano}!Organisme@{Organisme}}
+\subsubsection[{consultar\-\_\-tamano}]{\setlength{\rightskip}{0pt plus 5cm}int Organisme\-::consultar\-\_\-tamano (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_organisme_ac215686620dc98397493f2b6cfe37735}
+
+
+Consultora de tamaño del organisme. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el tamaño del organisme 
+\end{DoxyPostcond}
+
+
+Definición en la línea 292 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{return} \hyperlink{class_organisme_a03277939e7c5be36d0ee183ae6fa99c4}{tamano};
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_aebe855cdb3f44a278c18d21912f60301}{\index{Organisme@{Organisme}!consultar\-\_\-id@{consultar\-\_\-id}}
+\index{consultar\-\_\-id@{consultar\-\_\-id}!Organisme@{Organisme}}
+\subsubsection[{consultar\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}int Organisme\-::consultar\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_organisme_aebe855cdb3f44a278c18d21912f60301}
+
+
+Consultora de maximo identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el identificador del p.\-i. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 297 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{return} \hyperlink{class_organisme_ac2f0882eb2985d187f189fd238ceece3}{id};
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_a42ffae8888c18bafb3cca2d4140cd2cf}{\index{Organisme@{Organisme}!consultar\-\_\-maxid@{consultar\-\_\-maxid}}
+\index{consultar\-\_\-maxid@{consultar\-\_\-maxid}!Organisme@{Organisme}}
+\subsubsection[{consultar\-\_\-maxid}]{\setlength{\rightskip}{0pt plus 5cm}int Organisme\-::consultar\-\_\-maxid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_organisme_a42ffae8888c18bafb3cca2d4140cd2cf}
+
+
+Consultora de maximo identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el maximo identificador del p.\-i. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 302 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{return} \hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid};
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_a650fae6627523a55b2941c47d0cc3b82}{\index{Organisme@{Organisme}!consultar\-\_\-potcreixer@{consultar\-\_\-potcreixer}}
+\index{consultar\-\_\-potcreixer@{consultar\-\_\-potcreixer}!Organisme@{Organisme}}
+\subsubsection[{consultar\-\_\-potcreixer}]{\setlength{\rightskip}{0pt plus 5cm}bool Organisme\-::consultar\-\_\-potcreixer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_organisme_a650fae6627523a55b2941c47d0cc3b82}
+
+
+Consultora de posibilidad de crecer. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es si puede crecer el organismo o no 
+\end{DoxyPostcond}
+
+
+Definición en la línea 307 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{return} \hyperlink{class_organisme_a7b2b434f51af578ace7b37993aedd4f9}{potcreixer};
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_ae53bdafd0b8cf07483aa02ef5e8498cb}{\index{Organisme@{Organisme}!leer\-\_\-organisme@{leer\-\_\-organisme}}
+\index{leer\-\_\-organisme@{leer\-\_\-organisme}!Organisme@{Organisme}}
+\subsubsection[{leer\-\_\-organisme}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::leer\-\_\-organisme (
+\begin{DoxyParamCaption}
+\item[{int \&}]{num}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_ae53bdafd0b8cf07483aa02ef5e8498cb}
+
+
+Operación de lectura. 
+
+\begin{DoxyPrecond}{Precondición}
+num = identificador del organisme a llegir 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han leido los atributos del parámetro implícito en el canal standard de entrada. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 314 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordtype}{id} = num;
+    \hyperlink{class_organisme_a03277939e7c5be36d0ee183ae6fa99c4}{tamano} = 0;
+    \hyperlink{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{maxid} = 0;
+    \hyperlink{class_organisme_a7b2b434f51af578ace7b37993aedd4f9}{potcreixer} = \textcolor{keyword}{true};
+    \hyperlink{class_organisme_a75f7f37f4c89327fcc3376ea98ccc97c}{i\_leer\_organisme}(\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ},0);
+\}
+\end{DoxyCode}
+\hypertarget{class_organisme_ac8184de74f9e451daae0c2efed9d1499}{\index{Organisme@{Organisme}!escribir\-\_\-organisme@{escribir\-\_\-organisme}}
+\index{escribir\-\_\-organisme@{escribir\-\_\-organisme}!Organisme@{Organisme}}
+\subsubsection[{escribir\-\_\-organisme}]{\setlength{\rightskip}{0pt plus 5cm}void Organisme\-::escribir\-\_\-organisme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_organisme_ac8184de74f9e451daae0c2efed9d1499}
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos del parámetro implícito en el canal standard de salida. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 325 del archivo Organisme.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \hyperlink{class_organisme_ac88ecbfd1eafc62ba3744ed104626ab5}{i\_escribir\_organisme}(\hyperlink{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{Organ});
+\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}{\index{Organisme@{Organisme}!Organ@{Organ}}
+\index{Organ@{Organ}!Organisme@{Organisme}}
+\subsubsection[{Organ}]{\setlength{\rightskip}{0pt plus 5cm}Arbre$<${\bf Celula}$>$ Organisme\-::\-Organ\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a2b5474b1cfe7a6c6b2ffbab277382cef}
+
+
+Arbre de totes les celules del organisme. 
+
+
+
+Definición en la línea 19 del archivo Organisme.\-hpp.
+
+\hypertarget{class_organisme_a7b2b434f51af578ace7b37993aedd4f9}{\index{Organisme@{Organisme}!potcreixer@{potcreixer}}
+\index{potcreixer@{potcreixer}!Organisme@{Organisme}}
+\subsubsection[{potcreixer}]{\setlength{\rightskip}{0pt plus 5cm}bool Organisme\-::potcreixer\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a7b2b434f51af578ace7b37993aedd4f9}
+
+
+Indica si puede crecer (true) o no (false) 
+
+
+
+Definición en la línea 21 del archivo Organisme.\-hpp.
+
+\hypertarget{class_organisme_ac2f0882eb2985d187f189fd238ceece3}{\index{Organisme@{Organisme}!id@{id}}
+\index{id@{id}!Organisme@{Organisme}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int Organisme\-::id\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_ac2f0882eb2985d187f189fd238ceece3}
+
+
+Identificador del organisme. 
+
+
+
+Definición en la línea 23 del archivo Organisme.\-hpp.
+
+\hypertarget{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}{\index{Organisme@{Organisme}!maxid@{maxid}}
+\index{maxid@{maxid}!Organisme@{Organisme}}
+\subsubsection[{maxid}]{\setlength{\rightskip}{0pt plus 5cm}int Organisme\-::maxid\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a51070ec93d218a7c77af9817ca27fe8f}
+
+
+Identificador máximo de un organisme. 
+
+
+
+Definición en la línea 25 del archivo Organisme.\-hpp.
+
+\hypertarget{class_organisme_a03277939e7c5be36d0ee183ae6fa99c4}{\index{Organisme@{Organisme}!tamano@{tamano}}
+\index{tamano@{tamano}!Organisme@{Organisme}}
+\subsubsection[{tamano}]{\setlength{\rightskip}{0pt plus 5cm}int Organisme\-::tamano\hspace{0.3cm}{\ttfamily [private]}}}\label{class_organisme_a03277939e7c5be36d0ee183ae6fa99c4}
+
+
+Indica el tamaño del organisme. 
+
+
+
+Definición en la línea 27 del archivo Organisme.\-hpp.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_organisme_8hpp}{Organisme.\-hpp}\item 
+\hyperlink{_organisme_8cpp}{Organisme.\-cpp}\end{DoxyCompactItemize}

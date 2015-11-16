@@ -1,0 +1,210 @@
+\hypertarget{class_ranking}{\section{Referencia de la Clase Ranking}
+\label{class_ranking}\index{Ranking@{Ranking}}
+}
+
+
+Representa un ranking de todos los organismos del experiment.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ranking_a302c72c7f20aab4368c9e3f3f3ae2a71}{Ranking} (int N, int M)
+\begin{DoxyCompactList}\small\item\em Creadora con valor predeterminado. \end{DoxyCompactList}\item 
+void \hyperlink{class_ranking_a2d2aec44c0e24f7a60141b49221e3dbf}{actualizar\-\_\-ranking} (int a, int b, int c)
+\begin{DoxyCompactList}\small\item\em Actualizadora del ranking. \end{DoxyCompactList}\item 
+void \hyperlink{class_ranking_a6a15fd8b0850310f81dd83645a307c2a}{escribir\-\_\-ranking} () const 
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ list$<$ pair$<$ int, int $>$ $>$ $>$ \hyperlink{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{rank}
+\begin{DoxyCompactList}\small\item\em Sequencia de listas de familias del ranking. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}
+\begin{DoxyCompactList}\small\item\em Sequencia de las posiciones dels organismes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa un ranking de todos los organismos del experiment. 
+
+Definición en la línea 18 del archivo Ranking.\-hpp.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{class_ranking_a302c72c7f20aab4368c9e3f3f3ae2a71}{\index{Ranking@{Ranking}!Ranking@{Ranking}}
+\index{Ranking@{Ranking}!Ranking@{Ranking}}
+\subsubsection[{Ranking}]{\setlength{\rightskip}{0pt plus 5cm}Ranking\-::\-Ranking (
+\begin{DoxyParamCaption}
+\item[{int}]{N, }
+\item[{int}]{M}
+\end{DoxyParamCaption}
+)}}\label{class_ranking_a302c72c7f20aab4368c9e3f3f3ae2a71}
+
+
+Creadora con valor predeterminado. 
+
+\begin{DoxyPrecond}{Precondición}
+N $>$ 1, N $<$ M 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un ranking con tamaño inicial N y tamaño maximo M 
+\end{DoxyPostcond}
+
+
+Definición en la línea 9 del archivo Ranking.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \hyperlink{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{rank} = vector<list<pair<int,int> > >(M);
+    \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions} = vector<int>(M,0);
+    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < N; ++i) posicions[i] = i+1;
+\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_ranking_a2d2aec44c0e24f7a60141b49221e3dbf}{\index{Ranking@{Ranking}!actualizar\-\_\-ranking@{actualizar\-\_\-ranking}}
+\index{actualizar\-\_\-ranking@{actualizar\-\_\-ranking}!Ranking@{Ranking}}
+\subsubsection[{actualizar\-\_\-ranking}]{\setlength{\rightskip}{0pt plus 5cm}void Ranking\-::actualizar\-\_\-ranking (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+)}}\label{class_ranking_a2d2aec44c0e24f7a60141b49221e3dbf}
+
+
+Actualizadora del ranking. 
+
+\begin{DoxyPrecond}{Precondición}
+a i b identificadores de los padres del identificador de su respectivo hijo c 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El p.\-i. se ha actualizado 
+\end{DoxyPostcond}
+
+
+Definición en la línea 16 del archivo Ranking.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[c-1] = c;
+    list<pair<int,int> >::iterator it = \hyperlink{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{rank}[a].end();
+    pair<int,int> aux;
+    aux.first = b+1;
+    aux.second = c;
+    \hyperlink{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{rank}[a].insert(it,aux);                             \textcolor{comment}{// Insertem en la
+       posició del pare el identificador}
+                                                        \textcolor{comment}{// de la mare i del
+       fill}
+    list<pair<int,int> >::iterator it2 = \hyperlink{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{rank}[b].end();
+    pair<int,int> aux2;
+    aux2.first = a+1;
+    aux2.second = c;
+    \hyperlink{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{rank}[b].insert(it2,aux2);                           \textcolor{comment}{// Insertem en la
+       posició de la mare el identificador}
+                                                        \textcolor{comment}{// del pare i del fill}
+
+    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 2; ++i) \{
+        \textcolor{keywordtype}{int} aux;
+        \textcolor{keywordflow}{if} (i == 0) aux = a+1;                          \textcolor{comment}{// Cas en el que es
+       tracte el pare (a)}
+        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i == 1) aux = b+1;                     \textcolor{comment}{// Cas en el que es
+       tracte la mare (b)}
+        \textcolor{keywordtype}{int} j = 0;
+        \textcolor{keywordflow}{while} (\hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[j] != aux) ++j;
+        --j;
+        \textcolor{keywordflow}{while} (j >= 0 and (\hyperlink{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{rank}[\hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[j]-1]).size() < (\hyperlink{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{rank}
+      [aux-1]).size()) \{
+            \textcolor{keywordtype}{int} x = \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[j];
+            \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[j] = aux;
+            \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[j+1] = x;
+            --j;
+        \}
+        \textcolor{keywordflow}{while} (j >= 0 and (\hyperlink{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{rank}[\hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[j]-1]).size() == (\hyperlink{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{rank}
+      [aux-1]).size()) \{
+            \textcolor{keywordflow}{if} (\hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[j] > \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[j+1]) \{
+                \textcolor{keywordtype}{int} x = \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[j];
+                \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[j] = aux;
+                \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[j+1] = x;
+                --j;
+            \}
+            \textcolor{keywordflow}{else} \{
+                j = -1;
+            \}
+        \}
+    \}
+\}
+\end{DoxyCode}
+\hypertarget{class_ranking_a6a15fd8b0850310f81dd83645a307c2a}{\index{Ranking@{Ranking}!escribir\-\_\-ranking@{escribir\-\_\-ranking}}
+\index{escribir\-\_\-ranking@{escribir\-\_\-ranking}!Ranking@{Ranking}}
+\subsubsection[{escribir\-\_\-ranking}]{\setlength{\rightskip}{0pt plus 5cm}void Ranking\-::escribir\-\_\-ranking (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_ranking_a6a15fd8b0850310f81dd83645a307c2a}
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos del parámetro implícito en el canal standard de salida. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 61 del archivo Ranking.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordtype}{int} i = 0;
+    \textcolor{keywordflow}{while} (i < \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}.size() and \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[i] != 0) \{
+        cout << \hyperlink{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{posicions}[i] << \textcolor{stringliteral}{" :"};
+        list<pair<int,int> >::const\_iterator it = \hyperlink{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{rank}[posicions[i]-1].
+      begin();
+        \textcolor{keywordflow}{while} (it != \hyperlink{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{rank}[posicions[i]-1].end()) \{
+            cout << \textcolor{stringliteral}{" "} << (*it).first << \textcolor{stringliteral}{" "} << (*it).second;
+            ++it;
+        \}
+        cout << endl;
+        ++i;
+    \}
+\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}{\index{Ranking@{Ranking}!rank@{rank}}
+\index{rank@{rank}!Ranking@{Ranking}}
+\subsubsection[{rank}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$list$<$pair$<$int,int$>$ $>$ $>$ Ranking\-::rank\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ranking_a1621d0167b2811762a9cb5bc7a520e66}
+
+
+Sequencia de listas de familias del ranking. 
+
+
+
+Definición en la línea 22 del archivo Ranking.\-hpp.
+
+\hypertarget{class_ranking_aaa3215582de4fcca82b9d8637584c12b}{\index{Ranking@{Ranking}!posicions@{posicions}}
+\index{posicions@{posicions}!Ranking@{Ranking}}
+\subsubsection[{posicions}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ Ranking\-::posicions\hspace{0.3cm}{\ttfamily [private]}}}\label{class_ranking_aaa3215582de4fcca82b9d8637584c12b}
+
+
+Sequencia de las posiciones dels organismes. 
+
+
+
+Definición en la línea 24 del archivo Ranking.\-hpp.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_ranking_8hpp}{Ranking.\-hpp}\item 
+\hyperlink{_ranking_8cpp}{Ranking.\-cpp}\end{DoxyCompactItemize}

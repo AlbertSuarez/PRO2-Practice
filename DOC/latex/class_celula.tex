@@ -1,0 +1,297 @@
+\hypertarget{class_celula}{\section{Referencia de la Clase Celula}
+\label{class_celula}\index{Celula@{Celula}}
+}
+
+
+Representa una celula con atributos identificador y actividad.  
+
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_celula_a3c5017fbcec8cb564acc666aa7e21206}{Celula} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+\hyperlink{class_celula_a9fac2a026e4205b7ca6f9c582d2bf5c0}{Celula} (int iden, bool activ)
+\begin{DoxyCompactList}\small\item\em Creadora con valores concretos. \end{DoxyCompactList}\item 
+void \hyperlink{class_celula_ad8549ea461baa63298e8548691a270e2}{modificar\-\_\-id} (int iden)
+\begin{DoxyCompactList}\small\item\em Modificadora del identificador. \end{DoxyCompactList}\item 
+void \hyperlink{class_celula_a5bccaca548ef9f6c06e06a64265fabe3}{modificar\-\_\-activa} (bool activ)
+\begin{DoxyCompactList}\small\item\em Modificadora de la actividad. \end{DoxyCompactList}\item 
+int \hyperlink{class_celula_adfe788cb113f6e8dcf9def377a248255}{consultar\-\_\-id} () const 
+\begin{DoxyCompactList}\small\item\em Consultora del identificador. \end{DoxyCompactList}\item 
+bool \hyperlink{class_celula_a750270ff8277447af6cc3a122d585aab}{consultar\-\_\-activa} () const 
+\begin{DoxyCompactList}\small\item\em Consultora de la actividad. \end{DoxyCompactList}\item 
+void \hyperlink{class_celula_a975bfa82da9b298581d0df62102a394c}{leer\-\_\-celula} ()
+\begin{DoxyCompactList}\small\item\em Operación de lectura. \end{DoxyCompactList}\item 
+void \hyperlink{class_celula_ae476459eced4dd9982795efdc9a1c5fd}{escribir\-\_\-celula} () const 
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_celula_a0984a8b3deeed4979ed6f6141edc3c0c}{id}
+\begin{DoxyCompactList}\small\item\em Identificador de la celula. \end{DoxyCompactList}\item 
+bool \hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa}
+\begin{DoxyCompactList}\small\item\em Indica si es activa (true) o pasiva (false) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa una celula con atributos identificador y actividad. 
+
+Definición en la línea 14 del archivo Celula.\-hpp.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{class_celula_a3c5017fbcec8cb564acc666aa7e21206}{\index{Celula@{Celula}!Celula@{Celula}}
+\index{Celula@{Celula}!Celula@{Celula}}
+\subsubsection[{Celula}]{\setlength{\rightskip}{0pt plus 5cm}Celula\-::\-Celula (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_celula_a3c5017fbcec8cb564acc666aa7e21206}
+
+
+Creadora por defecto. 
+
+Se ejecuta automáticamente al declarar una celula \begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una celula sin valores determinados para sus atributos 
+\end{DoxyPostcond}
+
+
+Definición en la línea 9 del archivo Celula.\-cpp.
+
+
+\begin{DoxyCode}
+\{\}
+\end{DoxyCode}
+\hypertarget{class_celula_a9fac2a026e4205b7ca6f9c582d2bf5c0}{\index{Celula@{Celula}!Celula@{Celula}}
+\index{Celula@{Celula}!Celula@{Celula}}
+\subsubsection[{Celula}]{\setlength{\rightskip}{0pt plus 5cm}Celula\-::\-Celula (
+\begin{DoxyParamCaption}
+\item[{int}]{iden, }
+\item[{bool}]{activ}
+\end{DoxyParamCaption}
+)}}\label{class_celula_a9fac2a026e4205b7ca6f9c582d2bf5c0}
+
+
+Creadora con valores concretos. 
+
+\begin{DoxyPrecond}{Precondición}
+iden $>$ 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una celula con identificador \char`\"{}iden\char`\"{} y actividad \char`\"{}activ\char`\"{} 
+\end{DoxyPostcond}
+
+
+Definición en la línea 11 del archivo Celula.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordtype}{id} = iden;
+    \hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa} = activ;
+\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_celula_ad8549ea461baa63298e8548691a270e2}{\index{Celula@{Celula}!modificar\-\_\-id@{modificar\-\_\-id}}
+\index{modificar\-\_\-id@{modificar\-\_\-id}!Celula@{Celula}}
+\subsubsection[{modificar\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}void Celula\-::modificar\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{int}]{iden}
+\end{DoxyParamCaption}
+)}}\label{class_celula_ad8549ea461baa63298e8548691a270e2}
+
+
+Modificadora del identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+iden $>$ 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a tener identificador \char`\"{}iden\char`\"{} 
+\end{DoxyPostcond}
+
+
+Definición en la línea 19 del archivo Celula.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordtype}{id} = iden;
+\}
+\end{DoxyCode}
+\hypertarget{class_celula_a5bccaca548ef9f6c06e06a64265fabe3}{\index{Celula@{Celula}!modificar\-\_\-activa@{modificar\-\_\-activa}}
+\index{modificar\-\_\-activa@{modificar\-\_\-activa}!Celula@{Celula}}
+\subsubsection[{modificar\-\_\-activa}]{\setlength{\rightskip}{0pt plus 5cm}void Celula\-::modificar\-\_\-activa (
+\begin{DoxyParamCaption}
+\item[{bool}]{activ}
+\end{DoxyParamCaption}
+)}}\label{class_celula_a5bccaca548ef9f6c06e06a64265fabe3}
+
+
+Modificadora de la actividad. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El parámetro implícito pasa a tener actividad \char`\"{}activ\char`\"{} 
+\end{DoxyPostcond}
+
+
+Definición en la línea 24 del archivo Celula.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa} = activ;
+\}
+\end{DoxyCode}
+\hypertarget{class_celula_adfe788cb113f6e8dcf9def377a248255}{\index{Celula@{Celula}!consultar\-\_\-id@{consultar\-\_\-id}}
+\index{consultar\-\_\-id@{consultar\-\_\-id}!Celula@{Celula}}
+\subsubsection[{consultar\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}int Celula\-::consultar\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_celula_adfe788cb113f6e8dcf9def377a248255}
+
+
+Consultora del identificador. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es el identificador del parámetro implícito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 31 del archivo Celula.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{return} \hyperlink{class_celula_a0984a8b3deeed4979ed6f6141edc3c0c}{id};
+\}
+\end{DoxyCode}
+\hypertarget{class_celula_a750270ff8277447af6cc3a122d585aab}{\index{Celula@{Celula}!consultar\-\_\-activa@{consultar\-\_\-activa}}
+\index{consultar\-\_\-activa@{consultar\-\_\-activa}!Celula@{Celula}}
+\subsubsection[{consultar\-\_\-activa}]{\setlength{\rightskip}{0pt plus 5cm}bool Celula\-::consultar\-\_\-activa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_celula_a750270ff8277447af6cc3a122d585aab}
+
+
+Consultora de la actividad. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es la actividad del parámetro implícito 
+\end{DoxyPostcond}
+
+
+Definición en la línea 36 del archivo Celula.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordflow}{return} \hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa};
+\}
+\end{DoxyCode}
+\hypertarget{class_celula_a975bfa82da9b298581d0df62102a394c}{\index{Celula@{Celula}!leer\-\_\-celula@{leer\-\_\-celula}}
+\index{leer\-\_\-celula@{leer\-\_\-celula}!Celula@{Celula}}
+\subsubsection[{leer\-\_\-celula}]{\setlength{\rightskip}{0pt plus 5cm}void Celula\-::leer\-\_\-celula (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_celula_a975bfa82da9b298581d0df62102a394c}
+
+
+Operación de lectura. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han leido los atributos del parámetro implícito en el canal standard de entrada. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 43 del archivo Celula.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    \textcolor{keywordtype}{id} = readint();
+    \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} != 0) \hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa} = readbool();
+\}
+\end{DoxyCode}
+\hypertarget{class_celula_ae476459eced4dd9982795efdc9a1c5fd}{\index{Celula@{Celula}!escribir\-\_\-celula@{escribir\-\_\-celula}}
+\index{escribir\-\_\-celula@{escribir\-\_\-celula}!Celula@{Celula}}
+\subsubsection[{escribir\-\_\-celula}]{\setlength{\rightskip}{0pt plus 5cm}void Celula\-::escribir\-\_\-celula (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_celula_ae476459eced4dd9982795efdc9a1c5fd}
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han escrito los atributos del parámetro implícito en el canal standard de salida. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 51 del archivo Celula.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+    cout << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{" "};
+    \textcolor{keywordflow}{if} (\hyperlink{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{activa}) cout << \textcolor{stringliteral}{"1 "};
+    \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"-1 "};
+\}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_celula_a0984a8b3deeed4979ed6f6141edc3c0c}{\index{Celula@{Celula}!id@{id}}
+\index{id@{id}!Celula@{Celula}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int Celula\-::id\hspace{0.3cm}{\ttfamily [private]}}}\label{class_celula_a0984a8b3deeed4979ed6f6141edc3c0c}
+
+
+Identificador de la celula. 
+
+
+
+Definición en la línea 18 del archivo Celula.\-hpp.
+
+\hypertarget{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}{\index{Celula@{Celula}!activa@{activa}}
+\index{activa@{activa}!Celula@{Celula}}
+\subsubsection[{activa}]{\setlength{\rightskip}{0pt plus 5cm}bool Celula\-::activa\hspace{0.3cm}{\ttfamily [private]}}}\label{class_celula_a22ec0fe5fde605b5b3067acde093a3f7}
+
+
+Indica si es activa (true) o pasiva (false) 
+
+
+
+Definición en la línea 20 del archivo Celula.\-hpp.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_celula_8hpp}{Celula.\-hpp}\item 
+\hyperlink{_celula_8cpp}{Celula.\-cpp}\end{DoxyCompactItemize}

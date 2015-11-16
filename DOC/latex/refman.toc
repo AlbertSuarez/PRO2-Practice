@@ -1,0 +1,107 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}P\discretionary {-}{}{}R\discretionary {-}{}{}A\discretionary {-}{}{}C\discretionary {-}{}{}T\discretionary {-}{}{}I\discretionary {-}{}{}C\discretionary {-}{}{}A de P\discretionary {-}{}{}R\discretionary {-}{}{}O2.}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}\IeC {\'I}ndice de clases}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Lista de clases}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Indice de archivos}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Lista de archivos}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Documentaci\IeC {\'o}n de las clases}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Referencia de la Clase Celula}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Descripci\IeC {\'o}n detallada}{7}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Documentaci\IeC {\'o}n del constructor y destructor}{8}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}Celula}{8}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}Celula}{8}{subsubsection.4.1.2.2}
+\contentsline {subsection}{\numberline {4.1.3}Documentaci\IeC {\'o}n de las funciones miembro}{8}{subsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.3.1}modificar\discretionary {-}{}{}\_\discretionary {-}{}{}id}{8}{subsubsection.4.1.3.1}
+\contentsline {subsubsection}{\numberline {4.1.3.2}modificar\discretionary {-}{}{}\_\discretionary {-}{}{}activa}{9}{subsubsection.4.1.3.2}
+\contentsline {subsubsection}{\numberline {4.1.3.3}consultar\discretionary {-}{}{}\_\discretionary {-}{}{}id}{9}{subsubsection.4.1.3.3}
+\contentsline {subsubsection}{\numberline {4.1.3.4}consultar\discretionary {-}{}{}\_\discretionary {-}{}{}activa}{9}{subsubsection.4.1.3.4}
+\contentsline {subsubsection}{\numberline {4.1.3.5}leer\discretionary {-}{}{}\_\discretionary {-}{}{}celula}{10}{subsubsection.4.1.3.5}
+\contentsline {subsubsection}{\numberline {4.1.3.6}escribir\discretionary {-}{}{}\_\discretionary {-}{}{}celula}{10}{subsubsection.4.1.3.6}
+\contentsline {subsection}{\numberline {4.1.4}Documentaci\IeC {\'o}n de los datos miembro}{10}{subsection.4.1.4}
+\contentsline {subsubsection}{\numberline {4.1.4.1}id}{10}{subsubsection.4.1.4.1}
+\contentsline {subsubsection}{\numberline {4.1.4.2}activa}{10}{subsubsection.4.1.4.2}
+\contentsline {section}{\numberline {4.2}Referencia de la Clase Experiment}{11}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Descripci\IeC {\'o}n detallada}{11}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Documentaci\IeC {\'o}n del constructor y destructor}{12}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Experiment}{12}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}Experiment}{12}{subsubsection.4.2.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Documentaci\IeC {\'o}n de las funciones miembro}{12}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.3.1}reproduccion}{12}{subsubsection.4.2.3.1}
+\contentsline {subsubsection}{\numberline {4.2.3.2}estiron}{13}{subsubsection.4.2.3.2}
+\contentsline {subsubsection}{\numberline {4.2.3.3}recorte}{13}{subsubsection.4.2.3.3}
+\contentsline {subsubsection}{\numberline {4.2.3.4}tamano}{14}{subsubsection.4.2.3.4}
+\contentsline {subsubsection}{\numberline {4.2.3.5}tamano\discretionary {-}{}{}\_\discretionary {-}{}{}maximo}{14}{subsubsection.4.2.3.5}
+\contentsline {subsubsection}{\numberline {4.2.3.6}consultar\discretionary {-}{}{}\_\discretionary {-}{}{}vius}{14}{subsubsection.4.2.3.6}
+\contentsline {subsubsection}{\numberline {4.2.3.7}muerto}{15}{subsubsection.4.2.3.7}
+\contentsline {subsubsection}{\numberline {4.2.3.8}leer\discretionary {-}{}{}\_\discretionary {-}{}{}experiment}{15}{subsubsection.4.2.3.8}
+\contentsline {subsubsection}{\numberline {4.2.3.9}escribir\discretionary {-}{}{}\_\discretionary {-}{}{}organisme}{15}{subsubsection.4.2.3.9}
+\contentsline {subsubsection}{\numberline {4.2.3.10}escribir\discretionary {-}{}{}\_\discretionary {-}{}{}ultims}{16}{subsubsection.4.2.3.10}
+\contentsline {subsection}{\numberline {4.2.4}Documentaci\IeC {\'o}n de los datos miembro}{16}{subsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.4.1}M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}G\discretionary {-}{}{}A\discretionary {-}{}{}N\discretionary {-}{}{}I\discretionary {-}{}{}S\discretionary {-}{}{}M\discretionary {-}{}{}E\discretionary {-}{}{}S}{16}{subsubsection.4.2.4.1}
+\contentsline {subsubsection}{\numberline {4.2.4.2}mida}{16}{subsubsection.4.2.4.2}
+\contentsline {subsubsection}{\numberline {4.2.4.3}vius}{16}{subsubsection.4.2.4.3}
+\contentsline {subsubsection}{\numberline {4.2.4.4}E\discretionary {-}{}{}X\discretionary {-}{}{}P}{16}{subsubsection.4.2.4.4}
+\contentsline {subsubsection}{\numberline {4.2.4.5}emparellats}{17}{subsubsection.4.2.4.5}
+\contentsline {section}{\numberline {4.3}Referencia de la Clase Organisme}{17}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Descripci\IeC {\'o}n detallada}{18}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Documentaci\IeC {\'o}n del constructor y destructor}{18}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}Organisme}{18}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}Organisme}{19}{subsubsection.4.3.2.2}
+\contentsline {subsection}{\numberline {4.3.3}Documentaci\IeC {\'o}n de las funciones miembro}{19}{subsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.1}interseccion}{19}{subsubsection.4.3.3.1}
+\contentsline {subsubsection}{\numberline {4.3.3.2}compatibles}{19}{subsubsection.4.3.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3.3}crece}{20}{subsubsection.4.3.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.4}decrece}{21}{subsubsection.4.3.3.4}
+\contentsline {subsubsection}{\numberline {4.3.3.5}i\discretionary {-}{}{}\_\discretionary {-}{}{}leer\discretionary {-}{}{}\_\discretionary {-}{}{}organisme}{21}{subsubsection.4.3.3.5}
+\contentsline {subsubsection}{\numberline {4.3.3.6}i\discretionary {-}{}{}\_\discretionary {-}{}{}escribir\discretionary {-}{}{}\_\discretionary {-}{}{}organisme}{22}{subsubsection.4.3.3.6}
+\contentsline {subsubsection}{\numberline {4.3.3.7}te\discretionary {-}{}{}\_\discretionary {-}{}{}activa}{22}{subsubsection.4.3.3.7}
+\contentsline {subsubsection}{\numberline {4.3.3.8}i\discretionary {-}{}{}\_\discretionary {-}{}{}reproduccion}{22}{subsubsection.4.3.3.8}
+\contentsline {subsubsection}{\numberline {4.3.3.9}buscar\discretionary {-}{}{}\_\discretionary {-}{}{}maxid}{23}{subsubsection.4.3.3.9}
+\contentsline {subsubsection}{\numberline {4.3.3.10}estiron}{24}{subsubsection.4.3.3.10}
+\contentsline {subsubsection}{\numberline {4.3.3.11}recorte}{24}{subsubsection.4.3.3.11}
+\contentsline {subsubsection}{\numberline {4.3.3.12}reproduccion}{25}{subsubsection.4.3.3.12}
+\contentsline {subsubsection}{\numberline {4.3.3.13}esta\discretionary {-}{}{}\_\discretionary {-}{}{}vivo}{25}{subsubsection.4.3.3.13}
+\contentsline {subsubsection}{\numberline {4.3.3.14}consultar\discretionary {-}{}{}\_\discretionary {-}{}{}tamano}{26}{subsubsection.4.3.3.14}
+\contentsline {subsubsection}{\numberline {4.3.3.15}consultar\discretionary {-}{}{}\_\discretionary {-}{}{}id}{26}{subsubsection.4.3.3.15}
+\contentsline {subsubsection}{\numberline {4.3.3.16}consultar\discretionary {-}{}{}\_\discretionary {-}{}{}maxid}{26}{subsubsection.4.3.3.16}
+\contentsline {subsubsection}{\numberline {4.3.3.17}consultar\discretionary {-}{}{}\_\discretionary {-}{}{}potcreixer}{27}{subsubsection.4.3.3.17}
+\contentsline {subsubsection}{\numberline {4.3.3.18}leer\discretionary {-}{}{}\_\discretionary {-}{}{}organisme}{27}{subsubsection.4.3.3.18}
+\contentsline {subsubsection}{\numberline {4.3.3.19}escribir\discretionary {-}{}{}\_\discretionary {-}{}{}organisme}{27}{subsubsection.4.3.3.19}
+\contentsline {subsection}{\numberline {4.3.4}Documentaci\IeC {\'o}n de los datos miembro}{28}{subsection.4.3.4}
+\contentsline {subsubsection}{\numberline {4.3.4.1}Organ}{28}{subsubsection.4.3.4.1}
+\contentsline {subsubsection}{\numberline {4.3.4.2}potcreixer}{28}{subsubsection.4.3.4.2}
+\contentsline {subsubsection}{\numberline {4.3.4.3}id}{28}{subsubsection.4.3.4.3}
+\contentsline {subsubsection}{\numberline {4.3.4.4}maxid}{28}{subsubsection.4.3.4.4}
+\contentsline {subsubsection}{\numberline {4.3.4.5}tamano}{28}{subsubsection.4.3.4.5}
+\contentsline {section}{\numberline {4.4}Referencia de la Clase Ranking}{28}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Descripci\IeC {\'o}n detallada}{29}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Documentaci\IeC {\'o}n del constructor y destructor}{29}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}Ranking}{29}{subsubsection.4.4.2.1}
+\contentsline {subsection}{\numberline {4.4.3}Documentaci\IeC {\'o}n de las funciones miembro}{29}{subsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.3.1}actualizar\discretionary {-}{}{}\_\discretionary {-}{}{}ranking}{29}{subsubsection.4.4.3.1}
+\contentsline {subsubsection}{\numberline {4.4.3.2}escribir\discretionary {-}{}{}\_\discretionary {-}{}{}ranking}{30}{subsubsection.4.4.3.2}
+\contentsline {subsection}{\numberline {4.4.4}Documentaci\IeC {\'o}n de los datos miembro}{30}{subsection.4.4.4}
+\contentsline {subsubsection}{\numberline {4.4.4.1}rank}{31}{subsubsection.4.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.4.2}posicions}{31}{subsubsection.4.4.4.2}
+\contentsline {chapter}{\numberline {5}Documentaci\IeC {\'o}n de archivos}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}Referencia del Archivo Celula.\discretionary {-}{}{}cpp}{33}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Descripci\IeC {\'o}n detallada}{33}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Referencia del Archivo Celula.\discretionary {-}{}{}hpp}{33}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Descripci\IeC {\'o}n detallada}{34}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}Referencia del Archivo Experiment.\discretionary {-}{}{}cpp}{34}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Descripci\IeC {\'o}n detallada}{35}{subsection.5.3.1}
+\contentsline {section}{\numberline {5.4}Referencia del Archivo Experiment.\discretionary {-}{}{}hpp}{35}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Descripci\IeC {\'o}n detallada}{36}{subsection.5.4.1}
+\contentsline {section}{\numberline {5.5}Referencia del Archivo Organisme.\discretionary {-}{}{}cpp}{36}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Descripci\IeC {\'o}n detallada}{37}{subsection.5.5.1}
+\contentsline {section}{\numberline {5.6}Referencia del Archivo Organisme.\discretionary {-}{}{}hpp}{37}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Descripci\IeC {\'o}n detallada}{38}{subsection.5.6.1}
+\contentsline {section}{\numberline {5.7}Referencia del Archivo pro2.\discretionary {-}{}{}cpp}{38}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Descripci\IeC {\'o}n detallada}{38}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Documentaci\IeC {\'o}n de las funciones}{39}{subsection.5.7.2}
+\contentsline {subsubsection}{\numberline {5.7.2.1}main}{39}{subsubsection.5.7.2.1}
+\contentsline {section}{\numberline {5.8}Referencia del Archivo Ranking.\discretionary {-}{}{}cpp}{40}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Descripci\IeC {\'o}n detallada}{40}{subsection.5.8.1}
+\contentsline {section}{\numberline {5.9}Referencia del Archivo Ranking.\discretionary {-}{}{}hpp}{41}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Descripci\IeC {\'o}n detallada}{41}{subsection.5.9.1}
+\contentsline {part}{\IeC {\'I}ndice}{41}{subsection.5.9.1}

@@ -1,0 +1,282 @@
+---------------------------------------------------------
+JOC DE PROVES "TREBALL EN EQUIP"
+---------------------------------------------------------
+Entrada comentada:
+------------------------------
+3		// N : nombre inicial d'organismes
+9		// M : nombre màxim d'organismes
+
+// Estructura dels N organismes inicials: es llegeixen arbres en preordre, amb 0 com a marca
+// Per a cada cél·lula, es llegeix un enter (id) i un booleà que indica si es activa (true) o
+// pasiva (false). Totes les cél·lules d'un mateix organismes tenen id diferent i més gran
+// que zero. En la entrada no apareix el identificador del organisme, simplement es llegeix
+// la estructura. Els identificadors es marca segons es van introduint correlativament.
+
+// Organisme 1:
+1 true 2 true 3 false 4 false 0 0 0 5 true 6 false 0 0 7 true 0 0 8 false 0 0 0
+
+// Organisme 2:
+1 false 2 true 3 true 0 0 4 true 0 0 5 false 0 0 0
+
+// Organisme 3:
+1 true 2 false 0 3 true 0 0 4 true 5 false 0 0 6 true 7 true 0 0 8 false 0 0 0
+
+-5 3 1 2 3	// Escribim la estructura en inordre de 3 organismes:
+		// els de id 1, 2 i 3.
+		
+-1 2 3 5	// S'aplica un "estirón" a dos organismes de id 3 i 5.
+		// Cal fixar-s'hi en que al estirar el 5 no farà res ja que no existeix.
+
+-5 3 1 2 3
+-3		// Es realitza una ronda de reproduccio
+
+-5 4 1 2 3 4
+-4		// Es consulta el ranking
+
+-2 1 3		// S'aplica un "recorte" a un organisme: al de id 3.
+
+-5 1 3
+-5 4 1 2 3 4
+-2 4 1 2 3 4
+-5 4 1 2 3 4	// S'escriuen tots els organismes després d'haver experimentat un "recorte".
+
+-1 4 1 2 3 4	
+-5 4 1 2 3 4
+-2 1 2
+-2 1 2		// Aplicant aquest "recorte", mor l'organisme amb id 2.
+
+-5 4 1 2 3 4
+-2 3 1 3 4
+-5 3 1 3 4
+-3
+-5 5 1 2 3 4 5
+-4
+-6		// Final manual del experiment.
+
+
+
+
+Salida comentada:
+------------------------------
+
+ORGANISMOS
+
+// Operació -5: S'escriuen els arbres demanats en inordre. De cada cèl·lula
+// s'escriu el identificador i després si es activa (1) i si no ho és (-1).
+// Els subarbres buits també s'escriuen (0).
+
+1 : 0 4 -1 0 3 -1 0 2 1 0 6 -1 0 5 1 0 7 1 0 1 1 0 8 -1 0 
+2 : 0 3 1 0 2 1 0 4 1 0 1 -1 0 5 -1 0 
+3 : 0 2 -1 0 3 1 0 1 1 0 5 -1 0 4 1 0 7 1 0 6 1 0 8 -1 0 
+
+ORGANISMOS
+1 : 0 4 -1 0 3 -1 0 2 1 0 6 -1 0 5 1 0 7 1 0 1 1 0 8 -1 0 
+2 : 0 3 1 0 2 1 0 4 1 0 1 -1 0 5 -1 0 
+3 : 0 2 -1 0 9 1 0 3 1 0 10 1 0 1 1 0 11 -1 0 5 -1 0 12 -1 0 4 1 0 13 1 0 7 1 0 14 1 0 6 1 0 15 -1 0 8 -1 0 16 -1 0
+
+RONDA DE EMPAREJAMIENTOS
+
+// Operació -3: S'escriu el nombre d'organismes produits en aquella ronda
+
+Nuevos organismos : 1
+
+ORGANISMOS
+1 : 0 4 -1 0 3 -1 0 2 1 0 6 -1 0 5 1 0 7 1 0 1 1 0 8 -1 0 
+2 : 0 3 1 0 2 1 0 4 1 0 1 -1 0 5 -1 0 
+3 : 0 2 -1 0 9 1 0 3 1 0 10 1 0 1 1 0 11 -1 0 5 -1 0 12 -1 0 4 1 0 13 1 0 7 1 0 14 1 0 6 1 0 15 -1 0 8 -1 0 16 -1 0
+4 : 0 3 1 0 2 1 0 5 1 0 7 1 0 1 1 0 8 -1 0
+
+
+RANKING
+
+// Operació -4: Els organismes s'escriuen en ordre descendent per número de fills
+// produits i en cas d'empat per odre ascendent de id de l'organisme.
+// Per cada organisme s'escriu el id de amb qui s'ha aparellat i el id del fill 
+// corresponent, amb ordre ascendent del id del fill.
+
+1 : 2 4
+2 : 1 4
+3 :
+
+ORGANISMOS
+3 : 0 2 -1 0 3 1 0 1 1 0 5 -1 0 4 1 0 7 1 0 6 1 0 8 -1 0
+
+ORGANISMOS
+1 : 0 4 -1 0 3 -1 0 2 1 0 6 -1 0 5 1 0 7 1 0 1 1 0 8 -1 0 
+2 : 0 3 1 0 2 1 0 4 1 0 1 -1 0 5 -1 0 
+3 : 0 2 -1 0 3 1 0 1 1 0 5 -1 0 4 1 0 7 1 0 6 1 0 8 -1 0 
+4 : 0 3 1 0 2 1 0 5 1 0 7 1 0 1 1 0 8 -1 0
+
+ORGANISMOS
+
+// S'escriuen tots els organismes després d'haver experimentat un "recorte".
+
+1 : 0 3 -1 0 2 1 0 5 1 0 1 1 0 
+2 : 0 2 1 0 1 -1 0 
+3 : 0 2 -1 0 1 1 0 4 1 0 6 1 0 
+4 : 0 2 1 0 5 1 0 1 1 0
+
+ORGANISMOS
+
+// S'escriuen els organismes igual que abans ja que com han experimentat un
+// "recorte", ja no poden creixer.
+
+1 : 0 3 -1 0 2 1 0 5 1 0 1 1 0 
+2 : 0 2 1 0 1 -1 0 
+3 : 0 2 -1 0 1 1 0 4 1 0 6 1 0 
+4 : 0 2 1 0 5 1 0 1 1 0
+
+ORGANISMOS
+
+// L'organisme amb id 2 apareix amb un '0' perque està mort.
+
+1 : 0 3 -1 0 2 1 0 5 1 0 1 1 0 
+2 : 0
+3 : 0 2 -1 0 1 1 0 4 1 0 6 1 0 
+4 : 0 2 1 0 5 1 0 1 1 0 
+
+ORGANISMOS
+1 : 0 2 1 0 1 1 0                                                                       
+3 : 0 1 1 0 4 1 0                                                                       
+4 : 0 2 1 0 1 1 0
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 1
+
+ORGANISMOS
+1 : 0 2 1 0 1 1 0                                                                       
+2 : 0
+3 : 0 1 1 0 4 1 0                                                                       
+4 : 0 2 1 0 1 1 0
+5 : 0 2 1 0 1 1 0 3 1 0 
+
+RANKING
+1 : 2 4 3 5
+2 : 1 4
+3 : 1 5
+4 :
+5 :
+
+FIN		// S'escriu FIN al final del experiment
+
+// Llavors s'escriu els organismes totals i els organ vius al acabar el experiment
+
+Organismos en total : 5		// Número total d'organismes al final del experiment
+Organismos vivos : 4		// Número total d'organismes vius
+
+---------------------------------------------------------------------
+Entrada sin comentar:
+---------------------------------------------------------------------
+3
+9
+1 true 2 true 3 false 4 false 0 0 0 5 true 6 false 0 0 7 true 0 0 8 false 0 0
+1 false 2 true 3 true 0 0 4 true 0 0 5 false 0 0
+1 true 2 false 0 3 true 0 0 4 true 5 false 0 0 6 true 7 true 0 0 8 false 0 0
+-5 3 1 2 3
+-1 2 3 5
+-5 3 1 2 3
+-3
+-5 4 1 2 3 4
+-4
+-2 1 3
+-5 1 3
+-5 4 1 2 3 4
+-2 4 1 2 3 4
+-5 4 1 2 3 4
+-1 4 1 2 3 4
+-5 4 1 2 3 4
+-2 1 2
+-2 1 2
+-5 4 1 2 3 4
+-2 3 1 3 4
+-5 3 1 3 4
+-3
+-5 5 1 2 3 4 5
+-4
+-6
+
+
+----------------------------------------------------------------------
+Salida sin comentar:
+----------------------------------------------------------------------
+
+ORGANISMOS
+1 : 0 4 -1 0 3 -1 0 2 1 0 6 -1 0 5 1 0 7 1 0 1 1 0 8 -1 0 
+2 : 0 3 1 0 2 1 0 4 1 0 1 -1 0 5 -1 0 
+3 : 0 2 -1 0 3 1 0 1 1 0 5 -1 0 4 1 0 7 1 0 6 1 0 8 -1 0 
+
+ORGANISMOS
+1 : 0 4 -1 0 3 -1 0 2 1 0 6 -1 0 5 1 0 7 1 0 1 1 0 8 -1 0 
+2 : 0 3 1 0 2 1 0 4 1 0 1 -1 0 5 -1 0 
+3 : 0 2 -1 0 9 1 0 3 1 0 10 1 0 1 1 0 11 -1 0 5 -1 0 12 -1 0 4 1 0 13 1 0 7 1 0 14 1 0 6 1 0 15 -1 0 8 -1 0 16 -1 0 
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 1
+
+ORGANISMOS
+1 : 0 4 -1 0 3 -1 0 2 1 0 6 -1 0 5 1 0 7 1 0 1 1 0 8 -1 0 
+2 : 0 3 1 0 2 1 0 4 1 0 1 -1 0 5 -1 0 
+3 : 0 2 -1 0 9 1 0 3 1 0 10 1 0 1 1 0 11 -1 0 5 -1 0 12 -1 0 4 1 0 13 1 0 7 1 0 14 1 0 6 1 0 15 -1 0 8 -1 0 16 -1 0 
+4 : 0 3 1 0 2 1 0 5 1 0 7 1 0 1 1 0 8 -1 0 
+
+RANKING
+1 : 2 4
+2 : 1 4
+3 :
+4 :
+
+ORGANISMOS
+3 : 0 2 -1 0 3 1 0 1 1 0 5 -1 0 4 1 0 7 1 0 6 1 0 8 -1 0 
+
+ORGANISMOS
+1 : 0 4 -1 0 3 -1 0 2 1 0 6 -1 0 5 1 0 7 1 0 1 1 0 8 -1 0 
+2 : 0 3 1 0 2 1 0 4 1 0 1 -1 0 5 -1 0 
+3 : 0 2 -1 0 3 1 0 1 1 0 5 -1 0 4 1 0 7 1 0 6 1 0 8 -1 0 
+4 : 0 3 1 0 2 1 0 5 1 0 7 1 0 1 1 0 8 -1 0 
+
+ORGANISMOS
+1 : 0 3 -1 0 2 1 0 5 1 0 1 1 0 
+2 : 0 2 1 0 1 -1 0 
+3 : 0 2 -1 0 1 1 0 4 1 0 6 1 0 
+4 : 0 2 1 0 5 1 0 1 1 0 
+
+ORGANISMOS
+1 : 0 3 -1 0 2 1 0 5 1 0 1 1 0 
+2 : 0 2 1 0 1 -1 0 
+3 : 0 2 -1 0 1 1 0 4 1 0 6 1 0 
+4 : 0 2 1 0 5 1 0 1 1 0 
+
+ORGANISMOS
+1 : 0 3 -1 0 2 1 0 5 1 0 1 1 0 
+2 : 0 
+3 : 0 2 -1 0 1 1 0 4 1 0 6 1 0 
+4 : 0 2 1 0 5 1 0 1 1 0 
+
+ORGANISMOS
+1 : 0 2 1 0 1 1 0 
+3 : 0 1 1 0 4 1 0 
+4 : 0 2 1 0 1 1 0 
+
+RONDA DE EMPAREJAMIENTOS
+Nuevos organismos : 1
+
+ORGANISMOS
+1 : 0 2 1 0 1 1 0 
+2 : 0 
+3 : 0 1 1 0 4 1 0 
+4 : 0 2 1 0 1 1 0 
+5 : 0 2 1 0 1 1 0 3 1 0 
+
+RANKING
+1 : 2 4 3 5
+2 : 1 4
+3 : 1 5
+4 :
+5 :
+
+FIN
+
+Organismos en total : 5
+Organismos vivos : 4
+
+-----------------------------------------------------------------------------------------------

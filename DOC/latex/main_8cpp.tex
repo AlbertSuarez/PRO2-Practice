@@ -1,0 +1,170 @@
+\hypertarget{main_8cpp}{\section{Referencia del Archivo main.\-cpp}
+\label{main_8cpp}\index{main.\-cpp@{main.\-cpp}}
+}
+
+
+Programa principal para la P\-R\-A\-C\-T\-I\-C\-A de P\-R\-O2.  
+
+
+Dependencia gráfica adjunta para main.\-cpp\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Programa principal para la P\-R\-A\-C\-T\-I\-C\-A de P\-R\-O2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Programa principal para la P\-R\-A\-C\-T\-I\-C\-A de P\-R\-O2. 
+
+Definición en el archivo \hyperlink{main_8cpp_source}{main.\-cpp}.
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{main.\-cpp@{main.\-cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Programa principal para la P\-R\-A\-C\-T\-I\-C\-A de P\-R\-O2. 
+
+
+
+Definición en la línea 22 del archivo main.\-cpp.
+
+
+\begin{DoxyCode}
+\{
+  \textcolor{comment}{// leer los valores enteros N (población inicial del experimento, mayor que
+       1)}
+  cout << \textcolor{stringliteral}{"Introdueix el nombre de organismes inicials del experiment:  "};
+  \textcolor{keywordtype}{int} N = readint();
+  cout << endl;
+  
+  \textcolor{comment}{// leer M (máximo permitido de población histórica, mayor que N).}
+  cout << \textcolor{stringliteral}{"Introdueix el nombre de organismes maxims del experiment:  "};
+  \textcolor{keywordtype}{int} M = readint();
+  cout << endl;
+  
+  \textcolor{comment}{// leer los N organismos iniciales. Cada organismo ha de tener al }
+  \textcolor{comment}{// menos una célula (es decir, ha de estar vivo).}
+  \hyperlink{class_experiment}{Experiment} exp(M);
+  \hyperlink{class_ranking}{Ranking} R(M);
+  \textcolor{keywordtype}{int} fills\_ronda;
+  cout << \textcolor{stringliteral}{"Introdueix "} << N << \textcolor{stringliteral}{" organismes inicials del experiment:"} << endl;
+  exp.leer\_experiment(N);
+  
+  \textcolor{keywordtype}{int} op = readint();
+  cout << \textcolor{stringliteral}{"Introdueix valors de -1 a -5 per aplicar les diferents opcions del
+       programa i -6 per finalitzar-lo manualment"} << endl;
+  \textcolor{keywordflow}{while} (op != -6 and exp.tamano() < exp.tamano\_maximo() and not exp.muerto()) 
+      \{
+    \textcolor{keywordflow}{if} (op == -1) \{
+      \textcolor{comment}{// Aplicar un estirón a un subconjunto de organismos. Se proporciona una}
+      \textcolor{comment}{// secuencia de enteros no repetidos entre 1 y M.  Los organismos que
+       estén}
+      \textcolor{comment}{// vivos (y no hayan empezado a sufrir recortes) en el momento de
+       realizar la}
+      \textcolor{comment}{// tarea, cuyos identificadores estén en la secuencia, sufrirán el}
+      \textcolor{comment}{// correspondiente estirón.}
+      cout << \textcolor{stringliteral}{"Introdueix una sequencia, entre 1 i M, de naturals acabada en
+       -1:"} << endl;
+      \textcolor{keywordtype}{int} x = readint();
+      \textcolor{keywordflow}{while} (x != -1) \{
+        exp.estiron(x);
+        x = readint();
+      \}
+    \}
+    
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == -2) \{
+      \textcolor{comment}{// Aplicar un recorte a un subconjunto de organismos. Se proporciona una}
+      \textcolor{comment}{// secuencia de enteros no repetidos entre 1 y M.  Los organismos que
+       estén}
+      \textcolor{comment}{// vivos en el momento de realizar la tarea, cuyos identificadores estén
+       en la}
+      \textcolor{comment}{// secuencia, sufrirán el correspondiente recorte.}
+      cout << \textcolor{stringliteral}{"Introdueix una sequencia, entre 1 i M, de naturals acabada en
+       -1:"} << endl;
+      \textcolor{keywordtype}{int} x = readint();
+      \textcolor{keywordflow}{while} (x != -1) \{
+        exp.recorte(x);
+        x = readint();
+      \}
+    \}
+    
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == -3) \{
+      \textcolor{comment}{// Aplicar una ronda de reproducción a todos los organismos. Actualizar
+       el}
+      \textcolor{comment}{// ranking consecuentemente. Escribir el número de hijos nacidos en la
+       ronda.}
+      fills\_ronda = exp.reproduccion(R);
+      cout << \textcolor{stringliteral}{"El numero de hijos nacidos en la ronda son "} << fills\_ronda << 
+      endl;
+    \}
+    
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == -4) \{
+      \textcolor{comment}{// Obtener el ranking de reproducción de los organismos. Para cada
+       organismo,}
+      \textcolor{comment}{// vivo o muerto, que haya existido hasta el momento de la consulta se ha
+       de}
+      \textcolor{comment}{// obtener un listado de sus emparejamientos que hayan producido hijos. 
+       Cada}
+      \textcolor{comment}{// emparejamiento estará representado por el identificador de su
+       compañero y el}
+      \textcolor{comment}{// del hijo. El listado vendrá ordenado por el identificador de los
+       hijos.}
+      R.escribir\_ranking();
+    \}
+    
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == -5) \{
+      \textcolor{comment}{// Consultar el estado de un subconjunto de organismos. Se proporciona
+       una}
+      \textcolor{comment}{// secuencia de enteros no repetidos entre 1 y M.  Se escribirá la
+       estructura}
+      \textcolor{comment}{// celular de los organismos que estén vivos en el momento de realizar la
+       tarea}
+      \textcolor{comment}{// cuyos identificadores estén en la secuencia.}
+      cout << \textcolor{stringliteral}{"Introdueix una sequencia, entre 1 i M, de naturals acabada en
+       -1:"} << endl;
+      \textcolor{keywordtype}{int} x = readint();
+      \textcolor{keywordflow}{while} (x != -1) \{
+        exp.escribir\_organisme(x);
+        x = readint();
+      \}
+    \}
+    
+    op = readint();
+  \}
+  
+  \textcolor{comment}{// Tras el fin del proceso, se ha de indicar la causa. }
+  \textcolor{comment}{// Si ha sido porque la población ha llegado a M organismos (máximo}
+  \textcolor{comment}{// permitido), se han de realizar dos consultas adicionales:}
+  \textcolor{comment}{// Obtener el ranking}
+  \textcolor{comment}{// Consultar el estado de los organismos nacidos en la última ronda de}
+  \textcolor{comment}{// reproducción (atención: ésta ha podido ser incompleta)}
+  
+  \textcolor{keywordflow}{if} (op == -6) cout << \textcolor{stringliteral}{"Los supervisores del experimento han finalizado
+       manualmente"} << endl;
+  \textcolor{keywordflow}{else} \{
+    \textcolor{keywordflow}{if} (exp.tamano() == exp.tamano\_maximo()) \{
+      cout << \textcolor{stringliteral}{"La población histórica ha llegado a su maximo"} << endl;
+      R.escribir\_ranking();
+      exp.escribir\_ultims(fills\_ronda);
+    \}
+    \textcolor{keywordflow}{else} \{
+      cout << \textcolor{stringliteral}{"Han muerto todos los organismes"} << endl;
+    \}
+  \}
+\}  
+\end{DoxyCode}
